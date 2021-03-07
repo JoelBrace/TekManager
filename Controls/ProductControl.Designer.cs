@@ -29,7 +29,7 @@ namespace TekManager.Controls
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,13 +39,14 @@ namespace TekManager.Controls
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chStock = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chActive = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chBuyPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chSellPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chAveragePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chImageUrl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProductSearchButton = new System.Windows.Forms.Button();
             this.ProductAddButton = new System.Windows.Forms.Button();
-            this.chActive = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.EbayPriceFinderButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -98,7 +99,7 @@ namespace TekManager.Controls
             this.productsListView.FullRowSelect = true;
             this.productsListView.HideSelection = false;
             this.productsListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem3});
             this.productsListView.Location = new System.Drawing.Point(17, 72);
             this.productsListView.Name = "productsListView";
             this.productsListView.Size = new System.Drawing.Size(859, 572);
@@ -122,6 +123,10 @@ namespace TekManager.Controls
             // chStock
             // 
             this.chStock.Text = "Stock";
+            // 
+            // chActive
+            // 
+            this.chActive.Text = "Active";
             // 
             // chBuyPrice
             // 
@@ -157,15 +162,23 @@ namespace TekManager.Controls
             this.ProductAddButton.TabIndex = 6;
             this.ProductAddButton.Text = "Add Product";
             this.ProductAddButton.UseVisualStyleBackColor = true;
+            this.ProductAddButton.Click += new System.EventHandler(this.ProductAddButton_Click);
             // 
-            // chActive
+            // EbayPriceFinderButton
             // 
-            this.chActive.Text = "Active";
+            this.EbayPriceFinderButton.Location = new System.Drawing.Point(517, 13);
+            this.EbayPriceFinderButton.Name = "EbayPriceFinderButton";
+            this.EbayPriceFinderButton.Size = new System.Drawing.Size(90, 44);
+            this.EbayPriceFinderButton.TabIndex = 7;
+            this.EbayPriceFinderButton.Text = "Ebay Price Finder";
+            this.EbayPriceFinderButton.UseVisualStyleBackColor = true;
+            this.EbayPriceFinderButton.Click += new System.EventHandler(this.EbayPriceFinderButton_Click);
             // 
             // ProductControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.EbayPriceFinderButton);
             this.Controls.Add(this.ProductAddButton);
             this.Controls.Add(this.ProductSearchButton);
             this.Controls.Add(this.productsListView);
@@ -199,5 +212,6 @@ namespace TekManager.Controls
         private System.Windows.Forms.ColumnHeader chStock;
         private System.Windows.Forms.ColumnHeader chId;
         private System.Windows.Forms.ColumnHeader chActive;
+        private System.Windows.Forms.Button EbayPriceFinderButton;
     }
 }

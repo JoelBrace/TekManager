@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TekManager.Code.Connection;
 
 namespace TekManager.Controls
 {
@@ -15,6 +10,56 @@ namespace TekManager.Controls
         public MemberControl()
         {
             InitializeComponent();
+        }
+
+        private void MemberControl_Load(object sender, EventArgs e)
+        {
+            membersListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            membersListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            chId.Width = 30;
+            chEmail.Width = 150;
+        }
+
+        private void DisplayMembers(string term, int count)
+        {
+            membersListView.Items.Clear();
+            var serviceHelper = new DataServiceHelper();
+            serviceHelper.GetMembersByEmailOrId(term, count)
+                .Match(onSuccess: products =>
+                {
+                    foreach (var product in products)
+                    {
+                        var row = new string[] { product.Id.ToString(), product.Email, product.Name, product.Password };
+                        var lvi = new ListViewItem(row) { Tag = product };
+
+                        membersListView.Items.Add(lvi);
+                    }
+                }, onFailure: error =>
+                {
+                    MessageBox.Show($"Error: {Environment.NewLine}{error}");
+                });
+        }
+
+        private void RefreshMembers()
+        {
+            var count = 0;
+            try
+            {
+                count = Int32.Parse(CountTextBox.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error retrieving count. Make sure it is a number.");
+                return;
+            }
+
+
+            DisplayMembers(SearchTextBox.Text, count);
+        }
+
+        private void MemberSearchButton_Click(object sender, EventArgs e)
+        {
+            RefreshMembers();
         }
     }
 }

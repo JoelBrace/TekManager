@@ -125,5 +125,48 @@ namespace TekManager.Code.Connection
             }
 
         }
+
+        public Result<int> SaveProduct(ProductSqlModel product)
+        {
+            try
+            {
+                return Result.Success(_client.SaveProduct(product));
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<int>(e.ToString());
+            }
+
+
+            
+        }
+
+        public Result<int> DeleteProduct(int productId)
+        {
+            try
+            {
+                return Result.Success(_client.DeleteProduct(productId));
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<int>(e.ToString());
+            }
+        }
+
+
+        public Result<List<MemberSqlModel>> GetMembersByEmailOrId(string searchTerm, int count)
+        {
+            try
+            {
+                return Result.Success(_client.GetMembersByEmailOrId(searchTerm, count).ToList());
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<List<MemberSqlModel>>(e.ToString());
+            }
+        }
     }
 }

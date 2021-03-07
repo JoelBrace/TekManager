@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using TekManager.Code.Connection;
 using TekManager.DataService;
+using TekManager.Forms;
 
 namespace TekManager.Controls
 {
@@ -53,6 +54,24 @@ namespace TekManager.Controls
 
         private void ProductSearchButton_Click(object sender, EventArgs e)
         {
+            RefreshProducts();
+        }
+
+        private void productsListView_MouseDoubleClick(object sender, EventArgs e)
+        {
+            var selectedItem = (ProductSqlModel) productsListView.SelectedItems[0].Tag;
+            var productEditPopup = new EditProduct(selectedItem, RefreshProducts);
+            productEditPopup.Show(this);
+        }
+
+        private void ProductAddButton_Click(object sender, EventArgs e)
+        {
+            var productAddPopup = new AddProduct(RefreshProducts);
+            productAddPopup.Show();
+        }
+
+        private void RefreshProducts()
+        {
             var count = 0;
             try
             {
@@ -68,9 +87,12 @@ namespace TekManager.Controls
             DisplayProducts(SearchTextBox.Text, count);
         }
 
-        private void productsListView_MouseDoubleClick(object sender, EventArgs e)
+        private void EbayPriceFinderButton_Click(object sender, EventArgs e)
         {
-            var selectedItem = (ProductSqlModel) productsListView.SelectedItems[0].Tag;
+            
+            var ebayPriceFinder = new EbayPriceFinder();
+            ebayPriceFinder.Show(this);
+
         }
     }
 }
