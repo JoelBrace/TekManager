@@ -76,6 +76,7 @@ namespace TekManager.Code.EbayScraper
                 var priceHtml = htmlItem.CssSelect(".s-item__price").First().InnerText;
 
                 var imageUrl = htmlItem.CssSelect("img.s-item__image-img").First().GetAttributeValue("src");
+                var url = htmlItem.CssSelect("div.s-item__image").First().FirstChild.GetAttributeValue("href");
 
                 var prices = priceHtml.Split(' ');
 
@@ -93,7 +94,7 @@ namespace TekManager.Code.EbayScraper
 
                 priceList = priceList.Select(price => price.Replace("?", "")).ToList();
 
-                items.Add(new EbayItem(name, priceList.Select(Convert.ToDecimal).ToList(), imageUrl));
+                items.Add(new EbayItem(name, priceList.Select(Convert.ToDecimal).ToList(), imageUrl, url));
             }
 
             return items;

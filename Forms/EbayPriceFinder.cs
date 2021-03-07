@@ -42,10 +42,11 @@ namespace TekManager.Forms
             }
             else
             {
+                numIgnore = ebayItems.Count;
                 foreach (var ebayItem in ebayItems)
                 {
                     var row = new string[] {ebayItem.Name, ebayItem.Price.Average().ToString(), ebayItem.ImageUrl};
-                    var lvi = new ListViewItem(row) {Tag = ebayItem};
+                    var lvi = new ListViewItem(row) {Tag = ebayItem, Checked = true};
 
                     EbayResultsListView.Items.Add(lvi);
                 }
@@ -80,38 +81,38 @@ namespace TekManager.Forms
 
         public void BuyPriceText(string text)
         {
-            if (BuyPriceLabel.InvokeRequired)
+            if (BuyPriceTextBox.InvokeRequired)
             {
                 BuyPriceTextCallback d = BuyPriceText;
                 Invoke(d, text);
             }
             else
             {
-                BuyPriceLabel.Text = text;
+                BuyPriceTextBox.Text = text;
             }
         }
         public void SellPriceText(string text)
         {
-            if (SellPriceLabel.InvokeRequired)
+            if (SellPriceTextBox.InvokeRequired)
             {
                 SellPriceTextCallback d = SellPriceText;
                 Invoke(d, text);
             }
             else
             {
-                SellPriceLabel.Text = text;
+                SellPriceTextBox.Text = text;
             }
         }
         public void AvgPriceText(string text)
         {
-            if (AvgPriceLabel.InvokeRequired)
+            if (AvgPriceTextBox.InvokeRequired)
             {
                 AvgPriceTextCallback d = AvgPriceText;
                 Invoke(d, text);
             }
             else
             {
-                AvgPriceLabel.Text = text;
+                AvgPriceTextBox.Text = text;
             }
         }
 
@@ -162,9 +163,9 @@ namespace TekManager.Forms
 
             UpdateListView(items);
             ResultsText($"Results: {items.Count} of {data.NumberResults}");
-            BuyPriceText($"Buy Price: {Math.Round(buy, 2)}");
-            SellPriceText($"Sell Price: {Math.Round(sell, 2)}");
-            AvgPriceText($"Avg Price: {Math.Round(average, 2)}");
+            BuyPriceText($"{Math.Round(buy, 2)}");
+            SellPriceText($"{Math.Round(sell, 2)}");
+            AvgPriceText($"{Math.Round(average, 2)}");
             LoadingTextState(false);
         }
 
@@ -183,6 +184,26 @@ namespace TekManager.Forms
                 builder.AppendLine(item.SubItems[2].Text);
 
             Clipboard.SetText(builder.ToString());
+        }
+
+        private void EbayResultsListView_DoubleClick(object sender, EventArgs e)
+        {
+            var selectedItem = (EbayItem)EbayResultsListView.SelectedItems[0].Tag;
+            EbayResultsListView.SelectedItems[0].Checked = !EbayResultsListView.SelectedItems[0].Checked;
+            System.Diagnostics.Process.Start(selectedItem.Url);
+        }
+
+        private int start = 0;
+        private int numIgnore = 0;
+        private void EbayResultsListView_ItemChecked(object sender, EventArgs e)
+        {
+            if(start < numIgnore)
+            {
+                start++;
+                return;
+            }
+
+            Console.WriteLine("");
         }
     }
 }

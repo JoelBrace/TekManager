@@ -50,30 +50,36 @@ namespace TekManager.Forms
             this.BuyPriceLabel = new System.Windows.Forms.Label();
             this.SellPriceLabel = new System.Windows.Forms.Label();
             this.AvgPriceLabel = new System.Windows.Forms.Label();
+            this.BuyPriceTextBox = new System.Windows.Forms.TextBox();
+            this.AvgPriceTextBox = new System.Windows.Forms.TextBox();
+            this.SellPriceTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(17, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search";
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(79, 15);
+            this.NameTextBox.Location = new System.Drawing.Point(105, 18);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(133, 20);
+            this.NameTextBox.Size = new System.Drawing.Size(176, 22);
             this.NameTextBox.TabIndex = 1;
             // 
             // MinPriceTextBox
             // 
-            this.MinPriceTextBox.Location = new System.Drawing.Point(494, 14);
+            this.MinPriceTextBox.Location = new System.Drawing.Point(659, 17);
+            this.MinPriceTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.MinPriceTextBox.Name = "MinPriceTextBox";
-            this.MinPriceTextBox.Size = new System.Drawing.Size(47, 20);
+            this.MinPriceTextBox.Size = new System.Drawing.Size(61, 22);
             this.MinPriceTextBox.TabIndex = 3;
             this.MinPriceTextBox.Text = "0";
             // 
@@ -81,17 +87,19 @@ namespace TekManager.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(422, 14);
+            this.label2.Location = new System.Drawing.Point(563, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.Size = new System.Drawing.Size(80, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Min Price";
             // 
             // MaxPriceTextBox
             // 
-            this.MaxPriceTextBox.Location = new System.Drawing.Point(628, 13);
+            this.MaxPriceTextBox.Location = new System.Drawing.Point(837, 16);
+            this.MaxPriceTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.MaxPriceTextBox.Name = "MaxPriceTextBox";
-            this.MaxPriceTextBox.Size = new System.Drawing.Size(47, 20);
+            this.MaxPriceTextBox.Size = new System.Drawing.Size(61, 22);
             this.MaxPriceTextBox.TabIndex = 5;
             this.MaxPriceTextBox.Text = "0";
             // 
@@ -99,17 +107,19 @@ namespace TekManager.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(556, 14);
+            this.label3.Location = new System.Drawing.Point(741, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Min Price";
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(218, 14);
+            this.SearchButton.Location = new System.Drawing.Point(291, 17);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(4);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(75, 23);
+            this.SearchButton.Size = new System.Drawing.Size(100, 28);
             this.SearchButton.TabIndex = 6;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
@@ -117,20 +127,24 @@ namespace TekManager.Forms
             // 
             // EbayResultsListView
             // 
+            this.EbayResultsListView.CheckBoxes = true;
             this.EbayResultsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chTitle,
             this.chPrice,
             this.chImageUrl});
             this.EbayResultsListView.FullRowSelect = true;
             this.EbayResultsListView.HideSelection = false;
-            this.EbayResultsListView.Location = new System.Drawing.Point(17, 60);
+            this.EbayResultsListView.Location = new System.Drawing.Point(23, 74);
+            this.EbayResultsListView.Margin = new System.Windows.Forms.Padding(4);
             this.EbayResultsListView.MultiSelect = false;
             this.EbayResultsListView.Name = "EbayResultsListView";
-            this.EbayResultsListView.Size = new System.Drawing.Size(660, 345);
+            this.EbayResultsListView.Size = new System.Drawing.Size(879, 424);
             this.EbayResultsListView.TabIndex = 7;
             this.EbayResultsListView.UseCompatibleStateImageBehavior = false;
             this.EbayResultsListView.View = System.Windows.Forms.View.Details;
-            this.EbayResultsListView.KeyUp += new KeyEventHandler(this.EbayResultsListView_KeyUp);
+            this.EbayResultsListView.ItemChecked += new ItemCheckedEventHandler(this.EbayResultsListView_ItemChecked);
+            this.EbayResultsListView.DoubleClick += new System.EventHandler(this.EbayResultsListView_DoubleClick);
+            this.EbayResultsListView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.EbayResultsListView_KeyUp);
             // 
             // chTitle
             // 
@@ -146,9 +160,10 @@ namespace TekManager.Forms
             // 
             // PagesTextBox
             // 
-            this.PagesTextBox.Location = new System.Drawing.Point(353, 13);
+            this.PagesTextBox.Location = new System.Drawing.Point(471, 16);
+            this.PagesTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PagesTextBox.Name = "PagesTextBox";
-            this.PagesTextBox.Size = new System.Drawing.Size(47, 20);
+            this.PagesTextBox.Size = new System.Drawing.Size(61, 22);
             this.PagesTextBox.TabIndex = 9;
             this.PagesTextBox.Text = "5";
             // 
@@ -156,27 +171,30 @@ namespace TekManager.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(299, 14);
+            this.label4.Location = new System.Drawing.Point(399, 17);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 17);
+            this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Pages";
             // 
             // ResultsLabel
             // 
             this.ResultsLabel.AutoSize = true;
-            this.ResultsLabel.Location = new System.Drawing.Point(20, 408);
+            this.ResultsLabel.Location = new System.Drawing.Point(27, 502);
+            this.ResultsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ResultsLabel.Name = "ResultsLabel";
-            this.ResultsLabel.Size = new System.Drawing.Size(45, 13);
+            this.ResultsLabel.Size = new System.Drawing.Size(59, 17);
             this.ResultsLabel.TabIndex = 10;
             this.ResultsLabel.Text = "Results:";
             // 
             // LoadingLabel
             // 
             this.LoadingLabel.AutoSize = true;
-            this.LoadingLabel.Location = new System.Drawing.Point(20, 41);
+            this.LoadingLabel.Location = new System.Drawing.Point(27, 50);
+            this.LoadingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LoadingLabel.Name = "LoadingLabel";
-            this.LoadingLabel.Size = new System.Drawing.Size(54, 13);
+            this.LoadingLabel.Size = new System.Drawing.Size(71, 17);
             this.LoadingLabel.TabIndex = 11;
             this.LoadingLabel.Text = "Loading...";
             this.LoadingLabel.Visible = false;
@@ -185,37 +203,67 @@ namespace TekManager.Forms
             // 
             this.BuyPriceLabel.AutoSize = true;
             this.BuyPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuyPriceLabel.Location = new System.Drawing.Point(162, 416);
+            this.BuyPriceLabel.Location = new System.Drawing.Point(220, 515);
+            this.BuyPriceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BuyPriceLabel.Name = "BuyPriceLabel";
-            this.BuyPriceLabel.Size = new System.Drawing.Size(79, 20);
+            this.BuyPriceLabel.Size = new System.Drawing.Size(106, 25);
             this.BuyPriceLabel.TabIndex = 12;
-            this.BuyPriceLabel.Text = "Buy Price:";
+            this.BuyPriceLabel.Text = "Buy Price: ";
             // 
             // SellPriceLabel
             // 
             this.SellPriceLabel.AutoSize = true;
             this.SellPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SellPriceLabel.Location = new System.Drawing.Point(441, 416);
+            this.SellPriceLabel.Location = new System.Drawing.Point(701, 515);
+            this.SellPriceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SellPriceLabel.Name = "SellPriceLabel";
-            this.SellPriceLabel.Size = new System.Drawing.Size(78, 20);
+            this.SellPriceLabel.Size = new System.Drawing.Size(105, 25);
             this.SellPriceLabel.TabIndex = 13;
-            this.SellPriceLabel.Text = "Sell Price:";
+            this.SellPriceLabel.Text = "Sell Price: ";
             // 
             // AvgPriceLabel
             // 
             this.AvgPriceLabel.AutoSize = true;
             this.AvgPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AvgPriceLabel.Location = new System.Drawing.Point(301, 416);
+            this.AvgPriceLabel.Location = new System.Drawing.Point(467, 515);
+            this.AvgPriceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AvgPriceLabel.Name = "AvgPriceLabel";
-            this.AvgPriceLabel.Size = new System.Drawing.Size(79, 20);
+            this.AvgPriceLabel.Size = new System.Drawing.Size(107, 25);
             this.AvgPriceLabel.TabIndex = 14;
-            this.AvgPriceLabel.Text = "Avg Price:";
+            this.AvgPriceLabel.Text = "Avg Price: ";
+            // 
+            // BuyPriceTextBox
+            // 
+            this.BuyPriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuyPriceTextBox.Location = new System.Drawing.Point(319, 516);
+            this.BuyPriceTextBox.Name = "BuyPriceTextBox";
+            this.BuyPriceTextBox.Size = new System.Drawing.Size(100, 26);
+            this.BuyPriceTextBox.TabIndex = 15;
+            // 
+            // AvgPriceTextBox
+            // 
+            this.AvgPriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AvgPriceTextBox.Location = new System.Drawing.Point(567, 516);
+            this.AvgPriceTextBox.Name = "AvgPriceTextBox";
+            this.AvgPriceTextBox.Size = new System.Drawing.Size(100, 26);
+            this.AvgPriceTextBox.TabIndex = 16;
+            // 
+            // SellPriceTextBox
+            // 
+            this.SellPriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SellPriceTextBox.Location = new System.Drawing.Point(799, 516);
+            this.SellPriceTextBox.Name = "SellPriceTextBox";
+            this.SellPriceTextBox.Size = new System.Drawing.Size(100, 26);
+            this.SellPriceTextBox.TabIndex = 17;
             // 
             // EbayPriceFinder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 450);
+            this.ClientSize = new System.Drawing.Size(919, 554);
+            this.Controls.Add(this.SellPriceTextBox);
+            this.Controls.Add(this.AvgPriceTextBox);
+            this.Controls.Add(this.BuyPriceTextBox);
             this.Controls.Add(this.AvgPriceLabel);
             this.Controls.Add(this.SellPriceLabel);
             this.Controls.Add(this.BuyPriceLabel);
@@ -232,6 +280,7 @@ namespace TekManager.Forms
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EbayPriceFinder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ebay Price Finder";
@@ -261,5 +310,8 @@ namespace TekManager.Forms
         private System.Windows.Forms.Label BuyPriceLabel;
         private System.Windows.Forms.Label SellPriceLabel;
         private System.Windows.Forms.Label AvgPriceLabel;
+        private TextBox BuyPriceTextBox;
+        private TextBox AvgPriceTextBox;
+        private TextBox SellPriceTextBox;
     }
 }
