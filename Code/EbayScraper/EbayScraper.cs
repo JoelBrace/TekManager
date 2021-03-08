@@ -21,7 +21,7 @@ namespace TekManager.Code.EbayScraper
 
             var url = $"{EbayUrl}{searchName}{Params}{page}";
 
-            if (!(lowPrice == 0 && highPrice == 0))
+            if(!(lowPrice == 0 && highPrice == 0))
             {
                 url += $"&_udlo={lowPrice}&_udhi={highPrice}";
             }

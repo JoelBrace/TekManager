@@ -32,14 +32,15 @@ namespace TekManager.Controls
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.MemberSearchButton = new System.Windows.Forms.Button();
             this.membersListView = new System.Windows.Forms.ListView();
-            this.CountTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.chId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chPassword = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CountTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // MemberSearchButton
@@ -57,6 +58,7 @@ namespace TekManager.Controls
             this.membersListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chId,
             this.chEmail,
+            this.chStatus,
             this.chName,
             this.chPassword});
             this.membersListView.FullRowSelect = true;
@@ -69,6 +71,22 @@ namespace TekManager.Controls
             this.membersListView.TabIndex = 12;
             this.membersListView.UseCompatibleStateImageBehavior = false;
             this.membersListView.View = System.Windows.Forms.View.Details;
+            // 
+            // chId
+            // 
+            this.chId.Text = "Id";
+            // 
+            // chEmail
+            // 
+            this.chEmail.Text = "Email";
+            // 
+            // chName
+            // 
+            this.chName.Text = "Name";
+            // 
+            // chPassword
+            // 
+            this.chPassword.Text = "Password";
             // 
             // CountTextBox
             // 
@@ -105,21 +123,9 @@ namespace TekManager.Controls
             this.label1.TabIndex = 8;
             this.label1.Text = "Search (Id or Email)";
             // 
-            // chId
+            // chStatus
             // 
-            this.chId.Text = "Id";
-            // 
-            // chEmail
-            // 
-            this.chEmail.Text = "Email";
-            // 
-            // chName
-            // 
-            this.chName.Text = "Name";
-            // 
-            // chPassword
-            // 
-            this.chPassword.Text = "Password";
+            this.chStatus.Text = "Status";
             // 
             // MemberControl
             // 
@@ -151,5 +157,6 @@ namespace TekManager.Controls
         private System.Windows.Forms.ColumnHeader chEmail;
         private System.Windows.Forms.ColumnHeader chName;
         private System.Windows.Forms.ColumnHeader chPassword;
+        private System.Windows.Forms.ColumnHeader chStatus;
     }
 }

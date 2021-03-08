@@ -25,12 +25,12 @@ namespace TekManager.Controls
             membersListView.Items.Clear();
             var serviceHelper = new DataServiceHelper();
             serviceHelper.GetMembersByEmailOrId(term, count)
-                .Match(onSuccess: products =>
+                .Match(onSuccess: members =>
                 {
-                    foreach (var product in products)
+                    foreach (var member in members)
                     {
-                        var row = new string[] { product.Id.ToString(), product.Email, product.Name, product.Password };
-                        var lvi = new ListViewItem(row) { Tag = product };
+                        var row = new string[] { member.Id.ToString(), member.Email, member.Status, member.Name, member.Password };
+                        var lvi = new ListViewItem(row) { Tag = member };
 
                         membersListView.Items.Add(lvi);
                     }
