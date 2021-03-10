@@ -39,7 +39,7 @@ namespace TekManager
             this.LogViewerTabButton = new System.Windows.Forms.Button();
             this.MembersTabButton = new System.Windows.Forms.Button();
             this.ProductTabButton = new System.Windows.Forms.Button();
-            this.productRequestsControl = new TekManager.Controls.ProductRequestsControl();
+            this._sellRequestsControl = new TekManager.Controls.SellRequestsControl();
             this.paymentsControl = new TekManager.Controls.PaymentsControl();
             this.productControl = new TekManager.Controls.ProductControl();
             this.memberControl = new TekManager.Controls.MemberControl();
@@ -133,13 +133,13 @@ namespace TekManager
             this.ProductTabButton.UseVisualStyleBackColor = true;
             this.ProductTabButton.Click += new System.EventHandler(this.ProductTabButton_Click);
             // 
-            // productRequestsControl
+            // _sellRequestsControl
             // 
-            this.productRequestsControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productRequestsControl.Location = new System.Drawing.Point(190, 0);
-            this.productRequestsControl.Name = "productRequestsControl";
-            this.productRequestsControl.Size = new System.Drawing.Size(894, 661);
-            this.productRequestsControl.TabIndex = 6;
+            this._sellRequestsControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._sellRequestsControl.Location = new System.Drawing.Point(190, 0);
+            this._sellRequestsControl.Name = "_sellRequestsControl";
+            this._sellRequestsControl.Size = new System.Drawing.Size(894, 661);
+            this._sellRequestsControl.TabIndex = 6;
             // 
             // paymentsControl
             // 
@@ -180,7 +180,7 @@ namespace TekManager
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.logViewerControl);
             this.Controls.Add(this.memberControl);
-            this.Controls.Add(this.productRequestsControl);
+            this.Controls.Add(this._sellRequestsControl);
             this.Controls.Add(this.paymentsControl);
             this.Controls.Add(this.productControl);
             this.Controls.Add(this.panel2);
@@ -206,7 +206,7 @@ namespace TekManager
         private System.Windows.Forms.Button PaymentsTabButton;
         private System.Windows.Forms.Button MemberProductRequestsTabButton;
         private PaymentsControl paymentsControl;
-        private ProductRequestsControl productRequestsControl;
+        private SellRequestsControl _sellRequestsControl;
         private MemberControl memberControl;
         private LogViewerControl logViewerControl;
     }

@@ -494,6 +494,397 @@ namespace TekManager.DataService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SellProductRequestDto", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class SellProductRequestDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int MemberIdField;
+        
+        private int ProductIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QualityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TekManager.DataService.ArrayOfBase64Binary ImageDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TekManager.DataService.ArrayOfString ImageExtensionsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int MemberId {
+            get {
+                return this.MemberIdField;
+            }
+            set {
+                if ((this.MemberIdField.Equals(value) != true)) {
+                    this.MemberIdField = value;
+                    this.RaisePropertyChanged("MemberId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int ProductId {
+            get {
+                return this.ProductIdField;
+            }
+            set {
+                if ((this.ProductIdField.Equals(value) != true)) {
+                    this.ProductIdField = value;
+                    this.RaisePropertyChanged("ProductId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string ProductName {
+            get {
+                return this.ProductNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
+                    this.ProductNameField = value;
+                    this.RaisePropertyChanged("ProductName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Quality {
+            get {
+                return this.QualityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QualityField, value) != true)) {
+                    this.QualityField = value;
+                    this.RaisePropertyChanged("Quality");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public TekManager.DataService.ArrayOfBase64Binary ImageData {
+            get {
+                return this.ImageDataField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageDataField, value) != true)) {
+                    this.ImageDataField = value;
+                    this.RaisePropertyChanged("ImageData");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public TekManager.DataService.ArrayOfString ImageExtensions {
+            get {
+                return this.ImageExtensionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageExtensionsField, value) != true)) {
+                    this.ImageExtensionsField = value;
+                    this.RaisePropertyChanged("ImageExtensions");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfBase64Binary", Namespace="http://tempuri.org/", ItemName="base64Binary")]
+    [System.SerializableAttribute()]
+    public class ArrayOfBase64Binary : System.Collections.Generic.List<byte[]> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UpdateSellRequestDto", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class UpdateSellRequestDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusReasonField;
+        
+        private int SellRequestIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string StatusReason {
+            get {
+                return this.StatusReasonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusReasonField, value) != true)) {
+                    this.StatusReasonField = value;
+                    this.RaisePropertyChanged("StatusReason");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int SellRequestId {
+            get {
+                return this.SellRequestIdField;
+            }
+            set {
+                if ((this.SellRequestIdField.Equals(value) != true)) {
+                    this.SellRequestIdField = value;
+                    this.RaisePropertyChanged("SellRequestId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SellRequestSqlModel", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class SellRequestSqlModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        private int MemberIdField;
+        
+        private int ProductIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QualityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        private System.DateTime DateTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusReasonField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int MemberId {
+            get {
+                return this.MemberIdField;
+            }
+            set {
+                if ((this.MemberIdField.Equals(value) != true)) {
+                    this.MemberIdField = value;
+                    this.RaisePropertyChanged("MemberId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int ProductId {
+            get {
+                return this.ProductIdField;
+            }
+            set {
+                if ((this.ProductIdField.Equals(value) != true)) {
+                    this.ProductIdField = value;
+                    this.RaisePropertyChanged("ProductId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string ProductName {
+            get {
+                return this.ProductNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
+                    this.ProductNameField = value;
+                    this.RaisePropertyChanged("ProductName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Quality {
+            get {
+                return this.QualityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QualityField, value) != true)) {
+                    this.QualityField = value;
+                    this.RaisePropertyChanged("Quality");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        public System.DateTime DateTime {
+            get {
+                return this.DateTimeField;
+            }
+            set {
+                if ((this.DateTimeField.Equals(value) != true)) {
+                    this.DateTimeField = value;
+                    this.RaisePropertyChanged("DateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string StatusReason {
+            get {
+                return this.StatusReasonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusReasonField, value) != true)) {
+                    this.StatusReasonField = value;
+                    this.RaisePropertyChanged("StatusReason");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DataService.DataServiceSoap")]
     public interface DataServiceSoap {
@@ -561,6 +952,13 @@ namespace TekManager.DataService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetActiveProductsByPartial", ReplyAction="*")]
         System.Threading.Tasks.Task<TekManager.DataService.GetActiveProductsByPartialResponse> GetActiveProductsByPartialAsync(TekManager.DataService.GetActiveProductsByPartialRequest request);
         
+        // CODEGEN: Generating message contract since element name GetAllProductNamesAndIdsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllProductNamesAndIds", ReplyAction="*")]
+        TekManager.DataService.GetAllProductNamesAndIdsResponse GetAllProductNamesAndIds(TekManager.DataService.GetAllProductNamesAndIdsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllProductNamesAndIds", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetAllProductNamesAndIdsResponse> GetAllProductNamesAndIdsAsync(TekManager.DataService.GetAllProductNamesAndIdsRequest request);
+        
         // CODEGEN: Generating message contract since element name product from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SaveProduct", ReplyAction="*")]
         TekManager.DataService.SaveProductResponse SaveProduct(TekManager.DataService.SaveProductRequest request);
@@ -580,6 +978,34 @@ namespace TekManager.DataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMembersByEmailOrId", ReplyAction="*")]
         System.Threading.Tasks.Task<TekManager.DataService.GetMembersByEmailOrIdResponse> GetMembersByEmailOrIdAsync(TekManager.DataService.GetMembersByEmailOrIdRequest request);
+        
+        // CODEGEN: Generating message contract since element name sellProductRequest from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SaveSellProductRequest", ReplyAction="*")]
+        TekManager.DataService.SaveSellProductRequestResponse SaveSellProductRequest(TekManager.DataService.SaveSellProductRequestRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SaveSellProductRequest", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.SaveSellProductRequestResponse> SaveSellProductRequestAsync(TekManager.DataService.SaveSellProductRequestRequest request);
+        
+        // CODEGEN: Generating message contract since element name updateSellRequest from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateSellRequestStatusAndReason", ReplyAction="*")]
+        TekManager.DataService.UpdateSellRequestStatusAndReasonResponse UpdateSellRequestStatusAndReason(TekManager.DataService.UpdateSellRequestStatusAndReasonRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateSellRequestStatusAndReason", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.UpdateSellRequestStatusAndReasonResponse> UpdateSellRequestStatusAndReasonAsync(TekManager.DataService.UpdateSellRequestStatusAndReasonRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetSellRequestsByMemberIdResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetSellRequestsByMemberId", ReplyAction="*")]
+        TekManager.DataService.GetSellRequestsByMemberIdResponse GetSellRequestsByMemberId(TekManager.DataService.GetSellRequestsByMemberIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetSellRequestsByMemberId", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetSellRequestsByMemberIdResponse> GetSellRequestsByMemberIdAsync(TekManager.DataService.GetSellRequestsByMemberIdRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllSellRequestsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllSellRequests", ReplyAction="*")]
+        TekManager.DataService.GetAllSellRequestsResponse GetAllSellRequests(TekManager.DataService.GetAllSellRequestsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllSellRequests", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetAllSellRequestsResponse> GetAllSellRequestsAsync(TekManager.DataService.GetAllSellRequestsRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1196,6 +1622,67 @@ namespace TekManager.DataService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllProductNamesAndIdsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllProductNamesAndIds", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetAllProductNamesAndIdsRequestBody Body;
+        
+        public GetAllProductNamesAndIdsRequest() {
+        }
+        
+        public GetAllProductNamesAndIdsRequest(TekManager.DataService.GetAllProductNamesAndIdsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllProductNamesAndIdsRequestBody {
+        
+        public GetAllProductNamesAndIdsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllProductNamesAndIdsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllProductNamesAndIdsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetAllProductNamesAndIdsResponseBody Body;
+        
+        public GetAllProductNamesAndIdsResponse() {
+        }
+        
+        public GetAllProductNamesAndIdsResponse(TekManager.DataService.GetAllProductNamesAndIdsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetAllProductNamesAndIdsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.ProductSqlModel[] GetAllProductNamesAndIdsResult;
+        
+        public GetAllProductNamesAndIdsResponseBody() {
+        }
+        
+        public GetAllProductNamesAndIdsResponseBody(TekManager.DataService.ProductSqlModel[] GetAllProductNamesAndIdsResult) {
+            this.GetAllProductNamesAndIdsResult = GetAllProductNamesAndIdsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class SaveProductRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="SaveProduct", Namespace="http://tempuri.org/", Order=0)]
@@ -1329,6 +1816,264 @@ namespace TekManager.DataService {
         
         public GetMembersByEmailOrIdResponseBody(TekManager.DataService.MemberSqlModel[] GetMembersByEmailOrIdResult) {
             this.GetMembersByEmailOrIdResult = GetMembersByEmailOrIdResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SaveSellProductRequestRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SaveSellProductRequest", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.SaveSellProductRequestRequestBody Body;
+        
+        public SaveSellProductRequestRequest() {
+        }
+        
+        public SaveSellProductRequestRequest(TekManager.DataService.SaveSellProductRequestRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SaveSellProductRequestRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.SellProductRequestDto sellProductRequest;
+        
+        public SaveSellProductRequestRequestBody() {
+        }
+        
+        public SaveSellProductRequestRequestBody(TekManager.DataService.SellProductRequestDto sellProductRequest) {
+            this.sellProductRequest = sellProductRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SaveSellProductRequestResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SaveSellProductRequestResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.SaveSellProductRequestResponseBody Body;
+        
+        public SaveSellProductRequestResponse() {
+        }
+        
+        public SaveSellProductRequestResponse(TekManager.DataService.SaveSellProductRequestResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class SaveSellProductRequestResponseBody {
+        
+        public SaveSellProductRequestResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateSellRequestStatusAndReasonRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateSellRequestStatusAndReason", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.UpdateSellRequestStatusAndReasonRequestBody Body;
+        
+        public UpdateSellRequestStatusAndReasonRequest() {
+        }
+        
+        public UpdateSellRequestStatusAndReasonRequest(TekManager.DataService.UpdateSellRequestStatusAndReasonRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateSellRequestStatusAndReasonRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.UpdateSellRequestDto updateSellRequest;
+        
+        public UpdateSellRequestStatusAndReasonRequestBody() {
+        }
+        
+        public UpdateSellRequestStatusAndReasonRequestBody(TekManager.DataService.UpdateSellRequestDto updateSellRequest) {
+            this.updateSellRequest = updateSellRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateSellRequestStatusAndReasonResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateSellRequestStatusAndReasonResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.UpdateSellRequestStatusAndReasonResponseBody Body;
+        
+        public UpdateSellRequestStatusAndReasonResponse() {
+        }
+        
+        public UpdateSellRequestStatusAndReasonResponse(TekManager.DataService.UpdateSellRequestStatusAndReasonResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateSellRequestStatusAndReasonResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int UpdateSellRequestStatusAndReasonResult;
+        
+        public UpdateSellRequestStatusAndReasonResponseBody() {
+        }
+        
+        public UpdateSellRequestStatusAndReasonResponseBody(int UpdateSellRequestStatusAndReasonResult) {
+            this.UpdateSellRequestStatusAndReasonResult = UpdateSellRequestStatusAndReasonResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetSellRequestsByMemberIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSellRequestsByMemberId", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetSellRequestsByMemberIdRequestBody Body;
+        
+        public GetSellRequestsByMemberIdRequest() {
+        }
+        
+        public GetSellRequestsByMemberIdRequest(TekManager.DataService.GetSellRequestsByMemberIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetSellRequestsByMemberIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int memberId;
+        
+        public GetSellRequestsByMemberIdRequestBody() {
+        }
+        
+        public GetSellRequestsByMemberIdRequestBody(int memberId) {
+            this.memberId = memberId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetSellRequestsByMemberIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSellRequestsByMemberIdResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetSellRequestsByMemberIdResponseBody Body;
+        
+        public GetSellRequestsByMemberIdResponse() {
+        }
+        
+        public GetSellRequestsByMemberIdResponse(TekManager.DataService.GetSellRequestsByMemberIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetSellRequestsByMemberIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.SellRequestSqlModel[] GetSellRequestsByMemberIdResult;
+        
+        public GetSellRequestsByMemberIdResponseBody() {
+        }
+        
+        public GetSellRequestsByMemberIdResponseBody(TekManager.DataService.SellRequestSqlModel[] GetSellRequestsByMemberIdResult) {
+            this.GetSellRequestsByMemberIdResult = GetSellRequestsByMemberIdResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllSellRequestsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllSellRequests", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetAllSellRequestsRequestBody Body;
+        
+        public GetAllSellRequestsRequest() {
+        }
+        
+        public GetAllSellRequestsRequest(TekManager.DataService.GetAllSellRequestsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllSellRequestsRequestBody {
+        
+        public GetAllSellRequestsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllSellRequestsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllSellRequestsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetAllSellRequestsResponseBody Body;
+        
+        public GetAllSellRequestsResponse() {
+        }
+        
+        public GetAllSellRequestsResponse(TekManager.DataService.GetAllSellRequestsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetAllSellRequestsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.SellRequestSqlModel[] GetAllSellRequestsResult;
+        
+        public GetAllSellRequestsResponseBody() {
+        }
+        
+        public GetAllSellRequestsResponseBody(TekManager.DataService.SellRequestSqlModel[] GetAllSellRequestsResult) {
+            this.GetAllSellRequestsResult = GetAllSellRequestsResult;
         }
     }
     
@@ -1589,6 +2334,29 @@ namespace TekManager.DataService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetAllProductNamesAndIdsResponse TekManager.DataService.DataServiceSoap.GetAllProductNamesAndIds(TekManager.DataService.GetAllProductNamesAndIdsRequest request) {
+            return base.Channel.GetAllProductNamesAndIds(request);
+        }
+        
+        public TekManager.DataService.ProductSqlModel[] GetAllProductNamesAndIds() {
+            TekManager.DataService.GetAllProductNamesAndIdsRequest inValue = new TekManager.DataService.GetAllProductNamesAndIdsRequest();
+            inValue.Body = new TekManager.DataService.GetAllProductNamesAndIdsRequestBody();
+            TekManager.DataService.GetAllProductNamesAndIdsResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetAllProductNamesAndIds(inValue);
+            return retVal.Body.GetAllProductNamesAndIdsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetAllProductNamesAndIdsResponse> TekManager.DataService.DataServiceSoap.GetAllProductNamesAndIdsAsync(TekManager.DataService.GetAllProductNamesAndIdsRequest request) {
+            return base.Channel.GetAllProductNamesAndIdsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetAllProductNamesAndIdsResponse> GetAllProductNamesAndIdsAsync() {
+            TekManager.DataService.GetAllProductNamesAndIdsRequest inValue = new TekManager.DataService.GetAllProductNamesAndIdsRequest();
+            inValue.Body = new TekManager.DataService.GetAllProductNamesAndIdsRequestBody();
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetAllProductNamesAndIdsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TekManager.DataService.SaveProductResponse TekManager.DataService.DataServiceSoap.SaveProduct(TekManager.DataService.SaveProductRequest request) {
             return base.Channel.SaveProduct(request);
         }
@@ -1646,6 +2414,103 @@ namespace TekManager.DataService {
             inValue.Body.searchTerm = searchTerm;
             inValue.Body.count = count;
             return ((TekManager.DataService.DataServiceSoap)(this)).GetMembersByEmailOrIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.SaveSellProductRequestResponse TekManager.DataService.DataServiceSoap.SaveSellProductRequest(TekManager.DataService.SaveSellProductRequestRequest request) {
+            return base.Channel.SaveSellProductRequest(request);
+        }
+        
+        public void SaveSellProductRequest(TekManager.DataService.SellProductRequestDto sellProductRequest) {
+            TekManager.DataService.SaveSellProductRequestRequest inValue = new TekManager.DataService.SaveSellProductRequestRequest();
+            inValue.Body = new TekManager.DataService.SaveSellProductRequestRequestBody();
+            inValue.Body.sellProductRequest = sellProductRequest;
+            TekManager.DataService.SaveSellProductRequestResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).SaveSellProductRequest(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.SaveSellProductRequestResponse> TekManager.DataService.DataServiceSoap.SaveSellProductRequestAsync(TekManager.DataService.SaveSellProductRequestRequest request) {
+            return base.Channel.SaveSellProductRequestAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.SaveSellProductRequestResponse> SaveSellProductRequestAsync(TekManager.DataService.SellProductRequestDto sellProductRequest) {
+            TekManager.DataService.SaveSellProductRequestRequest inValue = new TekManager.DataService.SaveSellProductRequestRequest();
+            inValue.Body = new TekManager.DataService.SaveSellProductRequestRequestBody();
+            inValue.Body.sellProductRequest = sellProductRequest;
+            return ((TekManager.DataService.DataServiceSoap)(this)).SaveSellProductRequestAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.UpdateSellRequestStatusAndReasonResponse TekManager.DataService.DataServiceSoap.UpdateSellRequestStatusAndReason(TekManager.DataService.UpdateSellRequestStatusAndReasonRequest request) {
+            return base.Channel.UpdateSellRequestStatusAndReason(request);
+        }
+        
+        public int UpdateSellRequestStatusAndReason(TekManager.DataService.UpdateSellRequestDto updateSellRequest) {
+            TekManager.DataService.UpdateSellRequestStatusAndReasonRequest inValue = new TekManager.DataService.UpdateSellRequestStatusAndReasonRequest();
+            inValue.Body = new TekManager.DataService.UpdateSellRequestStatusAndReasonRequestBody();
+            inValue.Body.updateSellRequest = updateSellRequest;
+            TekManager.DataService.UpdateSellRequestStatusAndReasonResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).UpdateSellRequestStatusAndReason(inValue);
+            return retVal.Body.UpdateSellRequestStatusAndReasonResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.UpdateSellRequestStatusAndReasonResponse> TekManager.DataService.DataServiceSoap.UpdateSellRequestStatusAndReasonAsync(TekManager.DataService.UpdateSellRequestStatusAndReasonRequest request) {
+            return base.Channel.UpdateSellRequestStatusAndReasonAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.UpdateSellRequestStatusAndReasonResponse> UpdateSellRequestStatusAndReasonAsync(TekManager.DataService.UpdateSellRequestDto updateSellRequest) {
+            TekManager.DataService.UpdateSellRequestStatusAndReasonRequest inValue = new TekManager.DataService.UpdateSellRequestStatusAndReasonRequest();
+            inValue.Body = new TekManager.DataService.UpdateSellRequestStatusAndReasonRequestBody();
+            inValue.Body.updateSellRequest = updateSellRequest;
+            return ((TekManager.DataService.DataServiceSoap)(this)).UpdateSellRequestStatusAndReasonAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetSellRequestsByMemberIdResponse TekManager.DataService.DataServiceSoap.GetSellRequestsByMemberId(TekManager.DataService.GetSellRequestsByMemberIdRequest request) {
+            return base.Channel.GetSellRequestsByMemberId(request);
+        }
+        
+        public TekManager.DataService.SellRequestSqlModel[] GetSellRequestsByMemberId(int memberId) {
+            TekManager.DataService.GetSellRequestsByMemberIdRequest inValue = new TekManager.DataService.GetSellRequestsByMemberIdRequest();
+            inValue.Body = new TekManager.DataService.GetSellRequestsByMemberIdRequestBody();
+            inValue.Body.memberId = memberId;
+            TekManager.DataService.GetSellRequestsByMemberIdResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetSellRequestsByMemberId(inValue);
+            return retVal.Body.GetSellRequestsByMemberIdResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetSellRequestsByMemberIdResponse> TekManager.DataService.DataServiceSoap.GetSellRequestsByMemberIdAsync(TekManager.DataService.GetSellRequestsByMemberIdRequest request) {
+            return base.Channel.GetSellRequestsByMemberIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetSellRequestsByMemberIdResponse> GetSellRequestsByMemberIdAsync(int memberId) {
+            TekManager.DataService.GetSellRequestsByMemberIdRequest inValue = new TekManager.DataService.GetSellRequestsByMemberIdRequest();
+            inValue.Body = new TekManager.DataService.GetSellRequestsByMemberIdRequestBody();
+            inValue.Body.memberId = memberId;
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetSellRequestsByMemberIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetAllSellRequestsResponse TekManager.DataService.DataServiceSoap.GetAllSellRequests(TekManager.DataService.GetAllSellRequestsRequest request) {
+            return base.Channel.GetAllSellRequests(request);
+        }
+        
+        public TekManager.DataService.SellRequestSqlModel[] GetAllSellRequests() {
+            TekManager.DataService.GetAllSellRequestsRequest inValue = new TekManager.DataService.GetAllSellRequestsRequest();
+            inValue.Body = new TekManager.DataService.GetAllSellRequestsRequestBody();
+            TekManager.DataService.GetAllSellRequestsResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetAllSellRequests(inValue);
+            return retVal.Body.GetAllSellRequestsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetAllSellRequestsResponse> TekManager.DataService.DataServiceSoap.GetAllSellRequestsAsync(TekManager.DataService.GetAllSellRequestsRequest request) {
+            return base.Channel.GetAllSellRequestsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetAllSellRequestsResponse> GetAllSellRequestsAsync() {
+            TekManager.DataService.GetAllSellRequestsRequest inValue = new TekManager.DataService.GetAllSellRequestsRequest();
+            inValue.Body = new TekManager.DataService.GetAllSellRequestsRequestBody();
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetAllSellRequestsAsync(inValue);
         }
     }
 }

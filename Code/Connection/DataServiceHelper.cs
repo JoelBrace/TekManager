@@ -168,5 +168,44 @@ namespace TekManager.Code.Connection
                 return Result.Failure<List<MemberSqlModel>>(e.ToString());
             }
         }
+
+        public Result<List<SellRequestSqlModel>> GetSellRequestsByMemberId(int memberId)
+        {
+            try
+            {
+                return Result.Success(_client.GetSellRequestsByMemberId(memberId).ToList());
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<List<SellRequestSqlModel>>(e.ToString());
+            }
+        }
+
+        public Result<List<SellRequestSqlModel>> GetAllSellRequests()
+        {
+            try
+            {
+                return Result.Success(_client.GetAllSellRequests().ToList());
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<List<SellRequestSqlModel>>(e.ToString());
+            }
+        }
+
+        public Result<int> UpdateSellRequestStatusAndReason(UpdateSellRequestDto updateSellRequest)
+        {
+            try
+            {
+                return Result.Success(_client.UpdateSellRequestStatusAndReason(updateSellRequest));
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<int>(e.ToString());
+            }
+        }
     }
 }
