@@ -18,7 +18,8 @@ namespace TekManager
             _userControls.Add(memberControl);
             _userControls.Add(paymentsControl);
             _userControls.Add(logViewerControl);
-            _userControls.Add(_sellRequestsControl);
+            _userControls.Add(sellRequestsControl);
+            _userControls.Add(blogControl);
 
             ShowControl(productControl);
             CurrentPageLabel.Text = "Products";
@@ -46,7 +47,12 @@ namespace TekManager
 
         private void MemberProductRequestsTabButton_Click(object sender, System.EventArgs e)
         {
-            ShowControl(_sellRequestsControl, sender);
+            ShowControl(sellRequestsControl, sender);
+        }
+
+        private void BlogButton_Click(object sender, System.EventArgs e)
+        {
+            ShowControl(blogControl, sender);
         }
 
         private void ShowControl(UserControl userControl, object sender = null)
@@ -58,5 +64,7 @@ namespace TekManager
             if (sender == null) return;
             CurrentPageLabel.Text = ((Button)sender).Text;
         }
+
+        
     }
 }

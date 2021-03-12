@@ -2,6 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 using TekManager.Code.Connection;
+using TekManager.DataService;
+using TekManager.Forms;
 
 namespace TekManager.Controls
 {
@@ -32,7 +34,10 @@ namespace TekManager.Controls
                         var row = new string[] { member.Id.ToString(), member.Email, member.Status, member.Name, member.Password };
                         var lvi = new ListViewItem(row) { Tag = member };
 
-                        membersListView.Items.Add(lvi);
+                        if (member.Status == "B") lvi.BackColor = Color.IndianRed;
+
+
+                            membersListView.Items.Add(lvi);
                     }
                 }, onFailure: error =>
                 {
@@ -60,6 +65,18 @@ namespace TekManager.Controls
         private void MemberSearchButton_Click(object sender, EventArgs e)
         {
             RefreshMembers();
+        }
+
+        private void membersListView_DoubleClick(object sender, EventArgs e)
+        {
+            var selectedItem = (MemberSqlModel)membersListView.SelectedItems[0].Tag;
+
+
+            var memberEditPopup = new EditMember(selectedItem, RefreshMembers);
+            memberEditPopup.Show();
+
+            //var productEditPopup = new EditProduct(selectedItem, RefreshProducts);
+            //productEditPopup.Show(this);
         }
     }
 }

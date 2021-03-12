@@ -78,6 +78,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BlogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BlogControl.Designer.cs">
+      <DependentUpon>BlogControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\LogViewerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     <Compile Include="Controls\SellRequestsControl.Designer.cs">
       <DependentUpon>SellRequestsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddBlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddBlog.Designer.cs">
+      <DependentUpon>AddBlog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     <Compile Include="Forms\EbayPriceFinder.Designer.cs">
       <DependentUpon>EbayPriceFinder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditMember.Designer.cs">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +143,12 @@
     </Compile>
     <Compile Include="Forms\ViewSellRequest.Designer.cs">
       <DependentUpon>ViewSellRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewSellRequestImages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewSellRequestImages.Designer.cs">
+      <DependentUpon>ViewSellRequestImages.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -140,6 +164,9 @@
     <Compile Include="Controls\ProductControl.Designer.cs">
       <DependentUpon>ProductControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controls\BlogControl.resx">
+      <DependentUpon>BlogControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\LogViewerControl.resx">
       <DependentUpon>LogViewerControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,17 +179,26 @@
     <EmbeddedResource Include="Controls\SellRequestsControl.resx">
       <DependentUpon>SellRequestsControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddBlog.resx">
+      <DependentUpon>AddBlog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EbayPriceFinder.resx">
       <DependentUpon>EbayPriceFinder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditMember.resx">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditProduct.resx">
       <DependentUpon>EditProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewSellRequest.resx">
       <DependentUpon>ViewSellRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewSellRequestImages.resx">
+      <DependentUpon>ViewSellRequestImages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -183,6 +219,9 @@
     <None Include="Connected Services\DataService\TekManager.DataService.ArrayOfString.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.BlogPostSqlModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\DataService\TekManager.DataService.CanResetPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -192,10 +231,19 @@
     <None Include="Connected Services\DataService\TekManager.DataService.GetActiveProductsByPartialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\DataService\TekManager.DataService.GetAllProductNamesAndIdsResponse.datasource">
+    <None Include="Connected Services\DataService\TekManager.DataService.GetAllActiveProductNamesAndIdsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.GetAllSellRequestsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.GetBlogPostsByTitleOrContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.GetBlogPostsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.GetLogsByMessageResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.GetMembersByEmailOrIdResponse.datasource">
@@ -210,10 +258,19 @@
     <None Include="Connected Services\DataService\TekManager.DataService.GetProductsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.GetSellRequestImagesBySellRequestIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\DataService\TekManager.DataService.GetSellRequestsByMemberIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.LogMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.LogSqlModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.MemberSqlModel.datasource">
@@ -228,13 +285,22 @@
     <None Include="Connected Services\DataService\TekManager.DataService.ResetPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.SaveBlogPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\DataService\TekManager.DataService.SaveProductResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.SaveSellProductRequestResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.SellRequestImageModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\DataService\TekManager.DataService.SellRequestSqlModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.UpdateMemberResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.UpdateSellRequestStatusAndReasonResponse.datasource">

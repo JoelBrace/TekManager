@@ -98,7 +98,7 @@ namespace TekManager.Forms
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show($"Are you sure you want to delete {_productSqlModel.Name}?",
-                    "Mood Test", MessageBoxButtons.YesNo) == DialogResult.No) return;
+                    "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
 
             _serviceHelper.DeleteProduct(_productSqlModel.Id)

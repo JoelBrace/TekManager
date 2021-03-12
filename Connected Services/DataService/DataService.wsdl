@@ -165,13 +165,13 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="GetAllProductNamesAndIds">
+      <s:element name="GetAllActiveProductNamesAndIds">
         <s:complexType />
       </s:element>
-      <s:element name="GetAllProductNamesAndIdsResponse">
+      <s:element name="GetAllActiveProductNamesAndIdsResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetAllProductNamesAndIdsResult" type="tns:ArrayOfProductSqlModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllActiveProductNamesAndIdsResult" type="tns:ArrayOfProductSqlModel" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -321,6 +321,168 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetSellRequestImagesBySellRequestId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sellRequestId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellRequestImagesBySellRequestIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSellRequestImagesBySellRequestIdResult" type="tns:ArrayOfSellRequestImageModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSellRequestImageModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SellRequestImageModel" nillable="true" type="tns:SellRequestImageModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SellRequestImageModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SellRequestId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extension" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendSellRequestUpdateEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sellRequestId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSellRequestUpdateEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendSellRequestUpdateEmailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMember">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="memberModel" type="tns:MemberSqlModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMemberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateMemberResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogMessageResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLogsByMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageTerm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLogsByMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLogsByMessageResult" type="tns:ArrayOfLogSqlModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLogSqlModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LogSqlModel" nillable="true" type="tns:LogSqlModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LogSqlModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveBlogPost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="blogPostSqlModel" type="tns:BlogPostSqlModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BlogPostSqlModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveBlogPostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveBlogPostResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBlogPost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="blogPostId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBlogPostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteBlogPostResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogPosts">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBlogPostsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogPostsResult" type="tns:ArrayOfBlogPostSqlModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBlogPostSqlModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BlogPostSqlModel" nillable="true" type="tns:BlogPostSqlModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBlogPostsByTitleOrContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchTerm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogPostsByTitleOrContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogPostsByTitleOrContentResult" type="tns:ArrayOfBlogPostSqlModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="LoginSoapIn">
@@ -377,11 +539,11 @@
   <wsdl:message name="GetActiveProductsByPartialSoapOut">
     <wsdl:part name="parameters" element="tns:GetActiveProductsByPartialResponse" />
   </wsdl:message>
-  <wsdl:message name="GetAllProductNamesAndIdsSoapIn">
-    <wsdl:part name="parameters" element="tns:GetAllProductNamesAndIds" />
+  <wsdl:message name="GetAllActiveProductNamesAndIdsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllActiveProductNamesAndIds" />
   </wsdl:message>
-  <wsdl:message name="GetAllProductNamesAndIdsSoapOut">
-    <wsdl:part name="parameters" element="tns:GetAllProductNamesAndIdsResponse" />
+  <wsdl:message name="GetAllActiveProductNamesAndIdsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllActiveProductNamesAndIdsResponse" />
   </wsdl:message>
   <wsdl:message name="SaveProductSoapIn">
     <wsdl:part name="parameters" element="tns:SaveProduct" />
@@ -425,6 +587,60 @@
   <wsdl:message name="GetAllSellRequestsSoapOut">
     <wsdl:part name="parameters" element="tns:GetAllSellRequestsResponse" />
   </wsdl:message>
+  <wsdl:message name="GetSellRequestImagesBySellRequestIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellRequestImagesBySellRequestId" />
+  </wsdl:message>
+  <wsdl:message name="GetSellRequestImagesBySellRequestIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellRequestImagesBySellRequestIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSellRequestUpdateEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSellRequestUpdateEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendSellRequestUpdateEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSellRequestUpdateEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMember" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:LogMessage" />
+  </wsdl:message>
+  <wsdl:message name="LogMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:LogMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLogsByMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLogsByMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetLogsByMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLogsByMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveBlogPostSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveBlogPost" />
+  </wsdl:message>
+  <wsdl:message name="SaveBlogPostSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveBlogPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteBlogPost" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteBlogPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogPosts" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostsByTitleOrContentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogPostsByTitleOrContent" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostsByTitleOrContentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogPostsByTitleOrContentResponse" />
+  </wsdl:message>
   <wsdl:portType name="DataServiceSoap">
     <wsdl:operation name="Login">
       <wsdl:input message="tns:LoginSoapIn" />
@@ -462,9 +678,9 @@
       <wsdl:input message="tns:GetActiveProductsByPartialSoapIn" />
       <wsdl:output message="tns:GetActiveProductsByPartialSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetAllProductNamesAndIds">
-      <wsdl:input message="tns:GetAllProductNamesAndIdsSoapIn" />
-      <wsdl:output message="tns:GetAllProductNamesAndIdsSoapOut" />
+    <wsdl:operation name="GetAllActiveProductNamesAndIds">
+      <wsdl:input message="tns:GetAllActiveProductNamesAndIdsSoapIn" />
+      <wsdl:output message="tns:GetAllActiveProductNamesAndIdsSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="SaveProduct">
       <wsdl:input message="tns:SaveProductSoapIn" />
@@ -493,6 +709,42 @@
     <wsdl:operation name="GetAllSellRequests">
       <wsdl:input message="tns:GetAllSellRequestsSoapIn" />
       <wsdl:output message="tns:GetAllSellRequestsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSellRequestImagesBySellRequestId">
+      <wsdl:input message="tns:GetSellRequestImagesBySellRequestIdSoapIn" />
+      <wsdl:output message="tns:GetSellRequestImagesBySellRequestIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSellRequestUpdateEmail">
+      <wsdl:input message="tns:SendSellRequestUpdateEmailSoapIn" />
+      <wsdl:output message="tns:SendSellRequestUpdateEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <wsdl:input message="tns:UpdateMemberSoapIn" />
+      <wsdl:output message="tns:UpdateMemberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogMessage">
+      <wsdl:input message="tns:LogMessageSoapIn" />
+      <wsdl:output message="tns:LogMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogsByMessage">
+      <wsdl:input message="tns:GetLogsByMessageSoapIn" />
+      <wsdl:output message="tns:GetLogsByMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBlogPost">
+      <wsdl:input message="tns:SaveBlogPostSoapIn" />
+      <wsdl:output message="tns:SaveBlogPostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPost">
+      <wsdl:input message="tns:DeleteBlogPostSoapIn" />
+      <wsdl:output message="tns:DeleteBlogPostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPosts">
+      <wsdl:input message="tns:GetBlogPostsSoapIn" />
+      <wsdl:output message="tns:GetBlogPostsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostsByTitleOrContent">
+      <wsdl:input message="tns:GetBlogPostsByTitleOrContentSoapIn" />
+      <wsdl:output message="tns:GetBlogPostsByTitleOrContentSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="DataServiceSoap" type="tns:DataServiceSoap">
@@ -578,8 +830,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetAllProductNamesAndIds">
-      <soap:operation soapAction="http://tempuri.org/GetAllProductNamesAndIds" style="document" />
+    <wsdl:operation name="GetAllActiveProductNamesAndIds">
+      <soap:operation soapAction="http://tempuri.org/GetAllActiveProductNamesAndIds" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -643,6 +895,87 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllSellRequests">
       <soap:operation soapAction="http://tempuri.org/GetAllSellRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellRequestImagesBySellRequestId">
+      <soap:operation soapAction="http://tempuri.org/GetSellRequestImagesBySellRequestId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSellRequestUpdateEmail">
+      <soap:operation soapAction="http://tempuri.org/SendSellRequestUpdateEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <soap:operation soapAction="http://tempuri.org/UpdateMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogMessage">
+      <soap:operation soapAction="http://tempuri.org/LogMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogsByMessage">
+      <soap:operation soapAction="http://tempuri.org/GetLogsByMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBlogPost">
+      <soap:operation soapAction="http://tempuri.org/SaveBlogPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPost">
+      <soap:operation soapAction="http://tempuri.org/DeleteBlogPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPosts">
+      <soap:operation soapAction="http://tempuri.org/GetBlogPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostsByTitleOrContent">
+      <soap:operation soapAction="http://tempuri.org/GetBlogPostsByTitleOrContent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -734,8 +1067,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetAllProductNamesAndIds">
-      <soap12:operation soapAction="http://tempuri.org/GetAllProductNamesAndIds" style="document" />
+    <wsdl:operation name="GetAllActiveProductNamesAndIds">
+      <soap12:operation soapAction="http://tempuri.org/GetAllActiveProductNamesAndIds" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -799,6 +1132,87 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllSellRequests">
       <soap12:operation soapAction="http://tempuri.org/GetAllSellRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellRequestImagesBySellRequestId">
+      <soap12:operation soapAction="http://tempuri.org/GetSellRequestImagesBySellRequestId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSellRequestUpdateEmail">
+      <soap12:operation soapAction="http://tempuri.org/SendSellRequestUpdateEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogMessage">
+      <soap12:operation soapAction="http://tempuri.org/LogMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogsByMessage">
+      <soap12:operation soapAction="http://tempuri.org/GetLogsByMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBlogPost">
+      <soap12:operation soapAction="http://tempuri.org/SaveBlogPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPost">
+      <soap12:operation soapAction="http://tempuri.org/DeleteBlogPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPosts">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogPosts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostsByTitleOrContent">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogPostsByTitleOrContent" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

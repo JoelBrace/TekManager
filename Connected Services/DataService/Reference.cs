@@ -885,6 +885,263 @@ namespace TekManager.DataService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SellRequestImageModel", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class SellRequestImageModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        private int SellRequestIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] ImageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExtensionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int SellRequestId {
+            get {
+                return this.SellRequestIdField;
+            }
+            set {
+                if ((this.SellRequestIdField.Equals(value) != true)) {
+                    this.SellRequestIdField = value;
+                    this.RaisePropertyChanged("SellRequestId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public byte[] Image {
+            get {
+                return this.ImageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
+                    this.ImageField = value;
+                    this.RaisePropertyChanged("Image");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Extension {
+            get {
+                return this.ExtensionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExtensionField, value) != true)) {
+                    this.ExtensionField = value;
+                    this.RaisePropertyChanged("Extension");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LogSqlModel", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class LogSqlModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        private System.DateTime DateTimeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public System.DateTime DateTime {
+            get {
+                return this.DateTimeField;
+            }
+            set {
+                if ((this.DateTimeField.Equals(value) != true)) {
+                    this.DateTimeField = value;
+                    this.RaisePropertyChanged("DateTime");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BlogPostSqlModel", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class BlogPostSqlModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContentField;
+        
+        private System.DateTime DateTimeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public System.DateTime DateTime {
+            get {
+                return this.DateTimeField;
+            }
+            set {
+                if ((this.DateTimeField.Equals(value) != true)) {
+                    this.DateTimeField = value;
+                    this.RaisePropertyChanged("DateTime");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DataService.DataServiceSoap")]
     public interface DataServiceSoap {
@@ -952,12 +1209,12 @@ namespace TekManager.DataService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetActiveProductsByPartial", ReplyAction="*")]
         System.Threading.Tasks.Task<TekManager.DataService.GetActiveProductsByPartialResponse> GetActiveProductsByPartialAsync(TekManager.DataService.GetActiveProductsByPartialRequest request);
         
-        // CODEGEN: Generating message contract since element name GetAllProductNamesAndIdsResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllProductNamesAndIds", ReplyAction="*")]
-        TekManager.DataService.GetAllProductNamesAndIdsResponse GetAllProductNamesAndIds(TekManager.DataService.GetAllProductNamesAndIdsRequest request);
+        // CODEGEN: Generating message contract since element name GetAllActiveProductNamesAndIdsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllActiveProductNamesAndIds", ReplyAction="*")]
+        TekManager.DataService.GetAllActiveProductNamesAndIdsResponse GetAllActiveProductNamesAndIds(TekManager.DataService.GetAllActiveProductNamesAndIdsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllProductNamesAndIds", ReplyAction="*")]
-        System.Threading.Tasks.Task<TekManager.DataService.GetAllProductNamesAndIdsResponse> GetAllProductNamesAndIdsAsync(TekManager.DataService.GetAllProductNamesAndIdsRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllActiveProductNamesAndIds", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetAllActiveProductNamesAndIdsResponse> GetAllActiveProductNamesAndIdsAsync(TekManager.DataService.GetAllActiveProductNamesAndIdsRequest request);
         
         // CODEGEN: Generating message contract since element name product from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SaveProduct", ReplyAction="*")]
@@ -1006,6 +1263,67 @@ namespace TekManager.DataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllSellRequests", ReplyAction="*")]
         System.Threading.Tasks.Task<TekManager.DataService.GetAllSellRequestsResponse> GetAllSellRequestsAsync(TekManager.DataService.GetAllSellRequestsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetSellRequestImagesBySellRequestIdResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetSellRequestImagesBySellRequestId", ReplyAction="*")]
+        TekManager.DataService.GetSellRequestImagesBySellRequestIdResponse GetSellRequestImagesBySellRequestId(TekManager.DataService.GetSellRequestImagesBySellRequestIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetSellRequestImagesBySellRequestId", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetSellRequestImagesBySellRequestIdResponse> GetSellRequestImagesBySellRequestIdAsync(TekManager.DataService.GetSellRequestImagesBySellRequestIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SendSellRequestUpdateEmail", ReplyAction="*")]
+        bool SendSellRequestUpdateEmail(int sellRequestId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SendSellRequestUpdateEmail", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> SendSellRequestUpdateEmailAsync(int sellRequestId);
+        
+        // CODEGEN: Generating message contract since element name memberModel from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateMember", ReplyAction="*")]
+        TekManager.DataService.UpdateMemberResponse UpdateMember(TekManager.DataService.UpdateMemberRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateMember", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.UpdateMemberResponse> UpdateMemberAsync(TekManager.DataService.UpdateMemberRequest request);
+        
+        // CODEGEN: Generating message contract since element name message from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LogMessage", ReplyAction="*")]
+        TekManager.DataService.LogMessageResponse LogMessage(TekManager.DataService.LogMessageRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LogMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.LogMessageResponse> LogMessageAsync(TekManager.DataService.LogMessageRequest request);
+        
+        // CODEGEN: Generating message contract since element name messageTerm from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetLogsByMessage", ReplyAction="*")]
+        TekManager.DataService.GetLogsByMessageResponse GetLogsByMessage(TekManager.DataService.GetLogsByMessageRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetLogsByMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetLogsByMessageResponse> GetLogsByMessageAsync(TekManager.DataService.GetLogsByMessageRequest request);
+        
+        // CODEGEN: Generating message contract since element name blogPostSqlModel from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SaveBlogPost", ReplyAction="*")]
+        TekManager.DataService.SaveBlogPostResponse SaveBlogPost(TekManager.DataService.SaveBlogPostRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SaveBlogPost", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.SaveBlogPostResponse> SaveBlogPostAsync(TekManager.DataService.SaveBlogPostRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteBlogPost", ReplyAction="*")]
+        int DeleteBlogPost(int blogPostId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteBlogPost", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> DeleteBlogPostAsync(int blogPostId);
+        
+        // CODEGEN: Generating message contract since element name GetBlogPostsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBlogPosts", ReplyAction="*")]
+        TekManager.DataService.GetBlogPostsResponse GetBlogPosts(TekManager.DataService.GetBlogPostsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBlogPosts", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetBlogPostsResponse> GetBlogPostsAsync(TekManager.DataService.GetBlogPostsRequest request);
+        
+        // CODEGEN: Generating message contract since element name searchTerm from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBlogPostsByTitleOrContent", ReplyAction="*")]
+        TekManager.DataService.GetBlogPostsByTitleOrContentResponse GetBlogPostsByTitleOrContent(TekManager.DataService.GetBlogPostsByTitleOrContentRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBlogPostsByTitleOrContent", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetBlogPostsByTitleOrContentResponse> GetBlogPostsByTitleOrContentAsync(TekManager.DataService.GetBlogPostsByTitleOrContentRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1622,15 +1940,15 @@ namespace TekManager.DataService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetAllProductNamesAndIdsRequest {
+    public partial class GetAllActiveProductNamesAndIdsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllProductNamesAndIds", Namespace="http://tempuri.org/", Order=0)]
-        public TekManager.DataService.GetAllProductNamesAndIdsRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllActiveProductNamesAndIds", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetAllActiveProductNamesAndIdsRequestBody Body;
         
-        public GetAllProductNamesAndIdsRequest() {
+        public GetAllActiveProductNamesAndIdsRequest() {
         }
         
-        public GetAllProductNamesAndIdsRequest(TekManager.DataService.GetAllProductNamesAndIdsRequestBody Body) {
+        public GetAllActiveProductNamesAndIdsRequest(TekManager.DataService.GetAllActiveProductNamesAndIdsRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1639,9 +1957,9 @@ namespace TekManager.DataService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class GetAllProductNamesAndIdsRequestBody {
+    public partial class GetAllActiveProductNamesAndIdsRequestBody {
         
-        public GetAllProductNamesAndIdsRequestBody() {
+        public GetAllActiveProductNamesAndIdsRequestBody() {
         }
     }
     
@@ -1649,15 +1967,15 @@ namespace TekManager.DataService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetAllProductNamesAndIdsResponse {
+    public partial class GetAllActiveProductNamesAndIdsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllProductNamesAndIdsResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TekManager.DataService.GetAllProductNamesAndIdsResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllActiveProductNamesAndIdsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetAllActiveProductNamesAndIdsResponseBody Body;
         
-        public GetAllProductNamesAndIdsResponse() {
+        public GetAllActiveProductNamesAndIdsResponse() {
         }
         
-        public GetAllProductNamesAndIdsResponse(TekManager.DataService.GetAllProductNamesAndIdsResponseBody Body) {
+        public GetAllActiveProductNamesAndIdsResponse(TekManager.DataService.GetAllActiveProductNamesAndIdsResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -1666,16 +1984,16 @@ namespace TekManager.DataService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetAllProductNamesAndIdsResponseBody {
+    public partial class GetAllActiveProductNamesAndIdsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public TekManager.DataService.ProductSqlModel[] GetAllProductNamesAndIdsResult;
+        public TekManager.DataService.ProductSqlModel[] GetAllActiveProductNamesAndIdsResult;
         
-        public GetAllProductNamesAndIdsResponseBody() {
+        public GetAllActiveProductNamesAndIdsResponseBody() {
         }
         
-        public GetAllProductNamesAndIdsResponseBody(TekManager.DataService.ProductSqlModel[] GetAllProductNamesAndIdsResult) {
-            this.GetAllProductNamesAndIdsResult = GetAllProductNamesAndIdsResult;
+        public GetAllActiveProductNamesAndIdsResponseBody(TekManager.DataService.ProductSqlModel[] GetAllActiveProductNamesAndIdsResult) {
+            this.GetAllActiveProductNamesAndIdsResult = GetAllActiveProductNamesAndIdsResult;
         }
     }
     
@@ -2077,6 +2395,483 @@ namespace TekManager.DataService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetSellRequestImagesBySellRequestIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSellRequestImagesBySellRequestId", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetSellRequestImagesBySellRequestIdRequestBody Body;
+        
+        public GetSellRequestImagesBySellRequestIdRequest() {
+        }
+        
+        public GetSellRequestImagesBySellRequestIdRequest(TekManager.DataService.GetSellRequestImagesBySellRequestIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetSellRequestImagesBySellRequestIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int sellRequestId;
+        
+        public GetSellRequestImagesBySellRequestIdRequestBody() {
+        }
+        
+        public GetSellRequestImagesBySellRequestIdRequestBody(int sellRequestId) {
+            this.sellRequestId = sellRequestId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetSellRequestImagesBySellRequestIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSellRequestImagesBySellRequestIdResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetSellRequestImagesBySellRequestIdResponseBody Body;
+        
+        public GetSellRequestImagesBySellRequestIdResponse() {
+        }
+        
+        public GetSellRequestImagesBySellRequestIdResponse(TekManager.DataService.GetSellRequestImagesBySellRequestIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetSellRequestImagesBySellRequestIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.SellRequestImageModel[] GetSellRequestImagesBySellRequestIdResult;
+        
+        public GetSellRequestImagesBySellRequestIdResponseBody() {
+        }
+        
+        public GetSellRequestImagesBySellRequestIdResponseBody(TekManager.DataService.SellRequestImageModel[] GetSellRequestImagesBySellRequestIdResult) {
+            this.GetSellRequestImagesBySellRequestIdResult = GetSellRequestImagesBySellRequestIdResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateMemberRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateMember", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.UpdateMemberRequestBody Body;
+        
+        public UpdateMemberRequest() {
+        }
+        
+        public UpdateMemberRequest(TekManager.DataService.UpdateMemberRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateMemberRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.MemberSqlModel memberModel;
+        
+        public UpdateMemberRequestBody() {
+        }
+        
+        public UpdateMemberRequestBody(TekManager.DataService.MemberSqlModel memberModel) {
+            this.memberModel = memberModel;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateMemberResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateMemberResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.UpdateMemberResponseBody Body;
+        
+        public UpdateMemberResponse() {
+        }
+        
+        public UpdateMemberResponse(TekManager.DataService.UpdateMemberResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateMemberResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int UpdateMemberResult;
+        
+        public UpdateMemberResponseBody() {
+        }
+        
+        public UpdateMemberResponseBody(int UpdateMemberResult) {
+            this.UpdateMemberResult = UpdateMemberResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class LogMessageRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="LogMessage", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.LogMessageRequestBody Body;
+        
+        public LogMessageRequest() {
+        }
+        
+        public LogMessageRequest(TekManager.DataService.LogMessageRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class LogMessageRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string message;
+        
+        public LogMessageRequestBody() {
+        }
+        
+        public LogMessageRequestBody(string message) {
+            this.message = message;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class LogMessageResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="LogMessageResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.LogMessageResponseBody Body;
+        
+        public LogMessageResponse() {
+        }
+        
+        public LogMessageResponse(TekManager.DataService.LogMessageResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class LogMessageResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int LogMessageResult;
+        
+        public LogMessageResponseBody() {
+        }
+        
+        public LogMessageResponseBody(int LogMessageResult) {
+            this.LogMessageResult = LogMessageResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetLogsByMessageRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLogsByMessage", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetLogsByMessageRequestBody Body;
+        
+        public GetLogsByMessageRequest() {
+        }
+        
+        public GetLogsByMessageRequest(TekManager.DataService.GetLogsByMessageRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetLogsByMessageRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string messageTerm;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int count;
+        
+        public GetLogsByMessageRequestBody() {
+        }
+        
+        public GetLogsByMessageRequestBody(string messageTerm, int count) {
+            this.messageTerm = messageTerm;
+            this.count = count;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetLogsByMessageResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLogsByMessageResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetLogsByMessageResponseBody Body;
+        
+        public GetLogsByMessageResponse() {
+        }
+        
+        public GetLogsByMessageResponse(TekManager.DataService.GetLogsByMessageResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetLogsByMessageResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.LogSqlModel[] GetLogsByMessageResult;
+        
+        public GetLogsByMessageResponseBody() {
+        }
+        
+        public GetLogsByMessageResponseBody(TekManager.DataService.LogSqlModel[] GetLogsByMessageResult) {
+            this.GetLogsByMessageResult = GetLogsByMessageResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SaveBlogPostRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SaveBlogPost", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.SaveBlogPostRequestBody Body;
+        
+        public SaveBlogPostRequest() {
+        }
+        
+        public SaveBlogPostRequest(TekManager.DataService.SaveBlogPostRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SaveBlogPostRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.BlogPostSqlModel blogPostSqlModel;
+        
+        public SaveBlogPostRequestBody() {
+        }
+        
+        public SaveBlogPostRequestBody(TekManager.DataService.BlogPostSqlModel blogPostSqlModel) {
+            this.blogPostSqlModel = blogPostSqlModel;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SaveBlogPostResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SaveBlogPostResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.SaveBlogPostResponseBody Body;
+        
+        public SaveBlogPostResponse() {
+        }
+        
+        public SaveBlogPostResponse(TekManager.DataService.SaveBlogPostResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SaveBlogPostResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int SaveBlogPostResult;
+        
+        public SaveBlogPostResponseBody() {
+        }
+        
+        public SaveBlogPostResponseBody(int SaveBlogPostResult) {
+            this.SaveBlogPostResult = SaveBlogPostResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetBlogPostsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBlogPosts", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetBlogPostsRequestBody Body;
+        
+        public GetBlogPostsRequest() {
+        }
+        
+        public GetBlogPostsRequest(TekManager.DataService.GetBlogPostsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetBlogPostsRequestBody {
+        
+        public GetBlogPostsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetBlogPostsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBlogPostsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetBlogPostsResponseBody Body;
+        
+        public GetBlogPostsResponse() {
+        }
+        
+        public GetBlogPostsResponse(TekManager.DataService.GetBlogPostsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetBlogPostsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.BlogPostSqlModel[] GetBlogPostsResult;
+        
+        public GetBlogPostsResponseBody() {
+        }
+        
+        public GetBlogPostsResponseBody(TekManager.DataService.BlogPostSqlModel[] GetBlogPostsResult) {
+            this.GetBlogPostsResult = GetBlogPostsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetBlogPostsByTitleOrContentRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBlogPostsByTitleOrContent", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetBlogPostsByTitleOrContentRequestBody Body;
+        
+        public GetBlogPostsByTitleOrContentRequest() {
+        }
+        
+        public GetBlogPostsByTitleOrContentRequest(TekManager.DataService.GetBlogPostsByTitleOrContentRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetBlogPostsByTitleOrContentRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string searchTerm;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int count;
+        
+        public GetBlogPostsByTitleOrContentRequestBody() {
+        }
+        
+        public GetBlogPostsByTitleOrContentRequestBody(string searchTerm, int count) {
+            this.searchTerm = searchTerm;
+            this.count = count;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetBlogPostsByTitleOrContentResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBlogPostsByTitleOrContentResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetBlogPostsByTitleOrContentResponseBody Body;
+        
+        public GetBlogPostsByTitleOrContentResponse() {
+        }
+        
+        public GetBlogPostsByTitleOrContentResponse(TekManager.DataService.GetBlogPostsByTitleOrContentResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetBlogPostsByTitleOrContentResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.BlogPostSqlModel[] GetBlogPostsByTitleOrContentResult;
+        
+        public GetBlogPostsByTitleOrContentResponseBody() {
+        }
+        
+        public GetBlogPostsByTitleOrContentResponseBody(TekManager.DataService.BlogPostSqlModel[] GetBlogPostsByTitleOrContentResult) {
+            this.GetBlogPostsByTitleOrContentResult = GetBlogPostsByTitleOrContentResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface DataServiceSoapChannel : TekManager.DataService.DataServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -2334,26 +3129,26 @@ namespace TekManager.DataService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TekManager.DataService.GetAllProductNamesAndIdsResponse TekManager.DataService.DataServiceSoap.GetAllProductNamesAndIds(TekManager.DataService.GetAllProductNamesAndIdsRequest request) {
-            return base.Channel.GetAllProductNamesAndIds(request);
+        TekManager.DataService.GetAllActiveProductNamesAndIdsResponse TekManager.DataService.DataServiceSoap.GetAllActiveProductNamesAndIds(TekManager.DataService.GetAllActiveProductNamesAndIdsRequest request) {
+            return base.Channel.GetAllActiveProductNamesAndIds(request);
         }
         
-        public TekManager.DataService.ProductSqlModel[] GetAllProductNamesAndIds() {
-            TekManager.DataService.GetAllProductNamesAndIdsRequest inValue = new TekManager.DataService.GetAllProductNamesAndIdsRequest();
-            inValue.Body = new TekManager.DataService.GetAllProductNamesAndIdsRequestBody();
-            TekManager.DataService.GetAllProductNamesAndIdsResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetAllProductNamesAndIds(inValue);
-            return retVal.Body.GetAllProductNamesAndIdsResult;
+        public TekManager.DataService.ProductSqlModel[] GetAllActiveProductNamesAndIds() {
+            TekManager.DataService.GetAllActiveProductNamesAndIdsRequest inValue = new TekManager.DataService.GetAllActiveProductNamesAndIdsRequest();
+            inValue.Body = new TekManager.DataService.GetAllActiveProductNamesAndIdsRequestBody();
+            TekManager.DataService.GetAllActiveProductNamesAndIdsResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetAllActiveProductNamesAndIds(inValue);
+            return retVal.Body.GetAllActiveProductNamesAndIdsResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TekManager.DataService.GetAllProductNamesAndIdsResponse> TekManager.DataService.DataServiceSoap.GetAllProductNamesAndIdsAsync(TekManager.DataService.GetAllProductNamesAndIdsRequest request) {
-            return base.Channel.GetAllProductNamesAndIdsAsync(request);
+        System.Threading.Tasks.Task<TekManager.DataService.GetAllActiveProductNamesAndIdsResponse> TekManager.DataService.DataServiceSoap.GetAllActiveProductNamesAndIdsAsync(TekManager.DataService.GetAllActiveProductNamesAndIdsRequest request) {
+            return base.Channel.GetAllActiveProductNamesAndIdsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TekManager.DataService.GetAllProductNamesAndIdsResponse> GetAllProductNamesAndIdsAsync() {
-            TekManager.DataService.GetAllProductNamesAndIdsRequest inValue = new TekManager.DataService.GetAllProductNamesAndIdsRequest();
-            inValue.Body = new TekManager.DataService.GetAllProductNamesAndIdsRequestBody();
-            return ((TekManager.DataService.DataServiceSoap)(this)).GetAllProductNamesAndIdsAsync(inValue);
+        public System.Threading.Tasks.Task<TekManager.DataService.GetAllActiveProductNamesAndIdsResponse> GetAllActiveProductNamesAndIdsAsync() {
+            TekManager.DataService.GetAllActiveProductNamesAndIdsRequest inValue = new TekManager.DataService.GetAllActiveProductNamesAndIdsRequest();
+            inValue.Body = new TekManager.DataService.GetAllActiveProductNamesAndIdsRequestBody();
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetAllActiveProductNamesAndIdsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2511,6 +3306,199 @@ namespace TekManager.DataService {
             TekManager.DataService.GetAllSellRequestsRequest inValue = new TekManager.DataService.GetAllSellRequestsRequest();
             inValue.Body = new TekManager.DataService.GetAllSellRequestsRequestBody();
             return ((TekManager.DataService.DataServiceSoap)(this)).GetAllSellRequestsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetSellRequestImagesBySellRequestIdResponse TekManager.DataService.DataServiceSoap.GetSellRequestImagesBySellRequestId(TekManager.DataService.GetSellRequestImagesBySellRequestIdRequest request) {
+            return base.Channel.GetSellRequestImagesBySellRequestId(request);
+        }
+        
+        public TekManager.DataService.SellRequestImageModel[] GetSellRequestImagesBySellRequestId(int sellRequestId) {
+            TekManager.DataService.GetSellRequestImagesBySellRequestIdRequest inValue = new TekManager.DataService.GetSellRequestImagesBySellRequestIdRequest();
+            inValue.Body = new TekManager.DataService.GetSellRequestImagesBySellRequestIdRequestBody();
+            inValue.Body.sellRequestId = sellRequestId;
+            TekManager.DataService.GetSellRequestImagesBySellRequestIdResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetSellRequestImagesBySellRequestId(inValue);
+            return retVal.Body.GetSellRequestImagesBySellRequestIdResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetSellRequestImagesBySellRequestIdResponse> TekManager.DataService.DataServiceSoap.GetSellRequestImagesBySellRequestIdAsync(TekManager.DataService.GetSellRequestImagesBySellRequestIdRequest request) {
+            return base.Channel.GetSellRequestImagesBySellRequestIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetSellRequestImagesBySellRequestIdResponse> GetSellRequestImagesBySellRequestIdAsync(int sellRequestId) {
+            TekManager.DataService.GetSellRequestImagesBySellRequestIdRequest inValue = new TekManager.DataService.GetSellRequestImagesBySellRequestIdRequest();
+            inValue.Body = new TekManager.DataService.GetSellRequestImagesBySellRequestIdRequestBody();
+            inValue.Body.sellRequestId = sellRequestId;
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetSellRequestImagesBySellRequestIdAsync(inValue);
+        }
+        
+        public bool SendSellRequestUpdateEmail(int sellRequestId) {
+            return base.Channel.SendSellRequestUpdateEmail(sellRequestId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> SendSellRequestUpdateEmailAsync(int sellRequestId) {
+            return base.Channel.SendSellRequestUpdateEmailAsync(sellRequestId);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.UpdateMemberResponse TekManager.DataService.DataServiceSoap.UpdateMember(TekManager.DataService.UpdateMemberRequest request) {
+            return base.Channel.UpdateMember(request);
+        }
+        
+        public int UpdateMember(TekManager.DataService.MemberSqlModel memberModel) {
+            TekManager.DataService.UpdateMemberRequest inValue = new TekManager.DataService.UpdateMemberRequest();
+            inValue.Body = new TekManager.DataService.UpdateMemberRequestBody();
+            inValue.Body.memberModel = memberModel;
+            TekManager.DataService.UpdateMemberResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).UpdateMember(inValue);
+            return retVal.Body.UpdateMemberResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.UpdateMemberResponse> TekManager.DataService.DataServiceSoap.UpdateMemberAsync(TekManager.DataService.UpdateMemberRequest request) {
+            return base.Channel.UpdateMemberAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.UpdateMemberResponse> UpdateMemberAsync(TekManager.DataService.MemberSqlModel memberModel) {
+            TekManager.DataService.UpdateMemberRequest inValue = new TekManager.DataService.UpdateMemberRequest();
+            inValue.Body = new TekManager.DataService.UpdateMemberRequestBody();
+            inValue.Body.memberModel = memberModel;
+            return ((TekManager.DataService.DataServiceSoap)(this)).UpdateMemberAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.LogMessageResponse TekManager.DataService.DataServiceSoap.LogMessage(TekManager.DataService.LogMessageRequest request) {
+            return base.Channel.LogMessage(request);
+        }
+        
+        public int LogMessage(string message) {
+            TekManager.DataService.LogMessageRequest inValue = new TekManager.DataService.LogMessageRequest();
+            inValue.Body = new TekManager.DataService.LogMessageRequestBody();
+            inValue.Body.message = message;
+            TekManager.DataService.LogMessageResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).LogMessage(inValue);
+            return retVal.Body.LogMessageResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.LogMessageResponse> TekManager.DataService.DataServiceSoap.LogMessageAsync(TekManager.DataService.LogMessageRequest request) {
+            return base.Channel.LogMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.LogMessageResponse> LogMessageAsync(string message) {
+            TekManager.DataService.LogMessageRequest inValue = new TekManager.DataService.LogMessageRequest();
+            inValue.Body = new TekManager.DataService.LogMessageRequestBody();
+            inValue.Body.message = message;
+            return ((TekManager.DataService.DataServiceSoap)(this)).LogMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetLogsByMessageResponse TekManager.DataService.DataServiceSoap.GetLogsByMessage(TekManager.DataService.GetLogsByMessageRequest request) {
+            return base.Channel.GetLogsByMessage(request);
+        }
+        
+        public TekManager.DataService.LogSqlModel[] GetLogsByMessage(string messageTerm, int count) {
+            TekManager.DataService.GetLogsByMessageRequest inValue = new TekManager.DataService.GetLogsByMessageRequest();
+            inValue.Body = new TekManager.DataService.GetLogsByMessageRequestBody();
+            inValue.Body.messageTerm = messageTerm;
+            inValue.Body.count = count;
+            TekManager.DataService.GetLogsByMessageResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetLogsByMessage(inValue);
+            return retVal.Body.GetLogsByMessageResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetLogsByMessageResponse> TekManager.DataService.DataServiceSoap.GetLogsByMessageAsync(TekManager.DataService.GetLogsByMessageRequest request) {
+            return base.Channel.GetLogsByMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetLogsByMessageResponse> GetLogsByMessageAsync(string messageTerm, int count) {
+            TekManager.DataService.GetLogsByMessageRequest inValue = new TekManager.DataService.GetLogsByMessageRequest();
+            inValue.Body = new TekManager.DataService.GetLogsByMessageRequestBody();
+            inValue.Body.messageTerm = messageTerm;
+            inValue.Body.count = count;
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetLogsByMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.SaveBlogPostResponse TekManager.DataService.DataServiceSoap.SaveBlogPost(TekManager.DataService.SaveBlogPostRequest request) {
+            return base.Channel.SaveBlogPost(request);
+        }
+        
+        public int SaveBlogPost(TekManager.DataService.BlogPostSqlModel blogPostSqlModel) {
+            TekManager.DataService.SaveBlogPostRequest inValue = new TekManager.DataService.SaveBlogPostRequest();
+            inValue.Body = new TekManager.DataService.SaveBlogPostRequestBody();
+            inValue.Body.blogPostSqlModel = blogPostSqlModel;
+            TekManager.DataService.SaveBlogPostResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).SaveBlogPost(inValue);
+            return retVal.Body.SaveBlogPostResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.SaveBlogPostResponse> TekManager.DataService.DataServiceSoap.SaveBlogPostAsync(TekManager.DataService.SaveBlogPostRequest request) {
+            return base.Channel.SaveBlogPostAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.SaveBlogPostResponse> SaveBlogPostAsync(TekManager.DataService.BlogPostSqlModel blogPostSqlModel) {
+            TekManager.DataService.SaveBlogPostRequest inValue = new TekManager.DataService.SaveBlogPostRequest();
+            inValue.Body = new TekManager.DataService.SaveBlogPostRequestBody();
+            inValue.Body.blogPostSqlModel = blogPostSqlModel;
+            return ((TekManager.DataService.DataServiceSoap)(this)).SaveBlogPostAsync(inValue);
+        }
+        
+        public int DeleteBlogPost(int blogPostId) {
+            return base.Channel.DeleteBlogPost(blogPostId);
+        }
+        
+        public System.Threading.Tasks.Task<int> DeleteBlogPostAsync(int blogPostId) {
+            return base.Channel.DeleteBlogPostAsync(blogPostId);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetBlogPostsResponse TekManager.DataService.DataServiceSoap.GetBlogPosts(TekManager.DataService.GetBlogPostsRequest request) {
+            return base.Channel.GetBlogPosts(request);
+        }
+        
+        public TekManager.DataService.BlogPostSqlModel[] GetBlogPosts() {
+            TekManager.DataService.GetBlogPostsRequest inValue = new TekManager.DataService.GetBlogPostsRequest();
+            inValue.Body = new TekManager.DataService.GetBlogPostsRequestBody();
+            TekManager.DataService.GetBlogPostsResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetBlogPosts(inValue);
+            return retVal.Body.GetBlogPostsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetBlogPostsResponse> TekManager.DataService.DataServiceSoap.GetBlogPostsAsync(TekManager.DataService.GetBlogPostsRequest request) {
+            return base.Channel.GetBlogPostsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetBlogPostsResponse> GetBlogPostsAsync() {
+            TekManager.DataService.GetBlogPostsRequest inValue = new TekManager.DataService.GetBlogPostsRequest();
+            inValue.Body = new TekManager.DataService.GetBlogPostsRequestBody();
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetBlogPostsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetBlogPostsByTitleOrContentResponse TekManager.DataService.DataServiceSoap.GetBlogPostsByTitleOrContent(TekManager.DataService.GetBlogPostsByTitleOrContentRequest request) {
+            return base.Channel.GetBlogPostsByTitleOrContent(request);
+        }
+        
+        public TekManager.DataService.BlogPostSqlModel[] GetBlogPostsByTitleOrContent(string searchTerm, int count) {
+            TekManager.DataService.GetBlogPostsByTitleOrContentRequest inValue = new TekManager.DataService.GetBlogPostsByTitleOrContentRequest();
+            inValue.Body = new TekManager.DataService.GetBlogPostsByTitleOrContentRequestBody();
+            inValue.Body.searchTerm = searchTerm;
+            inValue.Body.count = count;
+            TekManager.DataService.GetBlogPostsByTitleOrContentResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetBlogPostsByTitleOrContent(inValue);
+            return retVal.Body.GetBlogPostsByTitleOrContentResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetBlogPostsByTitleOrContentResponse> TekManager.DataService.DataServiceSoap.GetBlogPostsByTitleOrContentAsync(TekManager.DataService.GetBlogPostsByTitleOrContentRequest request) {
+            return base.Channel.GetBlogPostsByTitleOrContentAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetBlogPostsByTitleOrContentResponse> GetBlogPostsByTitleOrContentAsync(string searchTerm, int count) {
+            TekManager.DataService.GetBlogPostsByTitleOrContentRequest inValue = new TekManager.DataService.GetBlogPostsByTitleOrContentRequest();
+            inValue.Body = new TekManager.DataService.GetBlogPostsByTitleOrContentRequestBody();
+            inValue.Body.searchTerm = searchTerm;
+            inValue.Body.count = count;
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetBlogPostsByTitleOrContentAsync(inValue);
         }
     }
 }

@@ -43,6 +43,7 @@ namespace TekManager.Forms
             this.reasonTextBox = new System.Windows.Forms.RichTextBox();
             this.reasonLabel = new System.Windows.Forms.Label();
             this.productNameLabel = new System.Windows.Forms.Label();
+            this.imagesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DeleteButton
@@ -127,9 +128,10 @@ namespace TekManager.Forms
             this.statusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusComboBox.FormattingEnabled = true;
             this.statusComboBox.Items.AddRange(new object[] {
-            "P",
-            "D",
-            "A"});
+            "Pending",
+            "Denied",
+            "Accepted",
+            "Finished"});
             this.statusComboBox.Location = new System.Drawing.Point(123, 450);
             this.statusComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.statusComboBox.Name = "statusComboBox";
@@ -198,11 +200,22 @@ namespace TekManager.Forms
             this.productNameLabel.TabIndex = 43;
             this.productNameLabel.Text = "Product Name: ";
             // 
+            // imagesButton
+            // 
+            this.imagesButton.Location = new System.Drawing.Point(549, 15);
+            this.imagesButton.Name = "imagesButton";
+            this.imagesButton.Size = new System.Drawing.Size(120, 50);
+            this.imagesButton.TabIndex = 44;
+            this.imagesButton.Text = "Images";
+            this.imagesButton.UseVisualStyleBackColor = true;
+            this.imagesButton.Click += new System.EventHandler(this.imagesButton_Click);
+            // 
             // ViewSellRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 818);
+            this.Controls.Add(this.imagesButton);
             this.Controls.Add(this.productNameLabel);
             this.Controls.Add(this.reasonLabel);
             this.Controls.Add(this.reasonTextBox);
@@ -218,6 +231,7 @@ namespace TekManager.Forms
             this.Controls.Add(this.memberIdLabel);
             this.Controls.Add(this.IdLabel);
             this.Name = "ViewSellRequest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sell Request";
             this.Load += new System.EventHandler(this.ViewSellRequest_Load);
             this.ResumeLayout(false);
@@ -241,5 +255,6 @@ namespace TekManager.Forms
         private System.Windows.Forms.RichTextBox reasonTextBox;
         private System.Windows.Forms.Label reasonLabel;
         private System.Windows.Forms.Label productNameLabel;
+        private System.Windows.Forms.Button imagesButton;
     }
 }

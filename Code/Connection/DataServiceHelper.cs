@@ -207,5 +207,96 @@ namespace TekManager.Code.Connection
                 return Result.Failure<int>(e.ToString());
             }
         }
+
+        public Result<List<SellRequestImageModel>> GetSellRequestImagesBySellRequestId(int sellRequestId)
+        {
+            try
+            {
+                return Result.Success(_client.GetSellRequestImagesBySellRequestId(sellRequestId).ToList());
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<List<SellRequestImageModel>>(e.ToString());
+            }
+        }
+
+        public Result<bool> SendSellRequestUpdateEmail(int sellRequestId)
+        {
+            try
+            {
+                return Result.Success(_client.SendSellRequestUpdateEmail(sellRequestId));
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<bool>(e.ToString());
+            }
+        }
+
+        public Result<int> UpdateMember(MemberSqlModel memberSqlModel)
+        {
+            try
+            {
+                return Result.Success(_client.UpdateMember(memberSqlModel));
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<int>(e.ToString());
+            }
+        }
+
+        public Result<List<LogSqlModel>> GetLogsByMessage(string messageTerm, int count)
+        {
+            try
+            {
+                return Result.Success(_client.GetLogsByMessage(messageTerm, count).ToList());
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<List<LogSqlModel>>(e.ToString());
+            }
+        }
+
+        public Result<List<BlogPostSqlModel>> GetBlogsByTitleOrContent(string messageTerm, int count)
+        {
+            try
+            {
+                return Result.Success(_client.GetBlogPostsByTitleOrContent(messageTerm, count).ToList());
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<List<BlogPostSqlModel>>(e.ToString());
+            }
+        }
+
+        public Result<int> SaveBlogPost(BlogPostSqlModel model)
+        {
+            try
+            {
+                return Result.Success(_client.SaveBlogPost(model));
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<int>(e.ToString());
+            }
+        }
+
+        public Result<int> DeleteBlogPost(int blogPostId)
+        {
+            try
+            {
+                return Result.Success(_client.DeleteBlogPost(blogPostId));
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<int>(e.ToString());
+            }
+        }
     }
 }
