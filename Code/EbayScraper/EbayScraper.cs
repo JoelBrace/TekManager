@@ -8,12 +8,16 @@ namespace TekManager.Code.EbayScraper
     {
         private readonly ScrapingBrowser _browser;
 
+
+        private readonly HtmlWeb _htmlWeb;
+
         private const string EbayUrl = "https://www.ebay.co.uk/sch/i.html?_nkw=";
         private const string Params = "&LH_Sold=1&LH_ItemCondition=3000&LH_BIN=1&_ipg=200&_pgn=";
 
         public EbayScraper()
         {
             _browser = new ScrapingBrowser();
+            _htmlWeb = new HtmlWeb();
         }
         public HtmlNode GetHtml(string searchName, int page, int lowPrice, int highPrice)
         {
@@ -26,7 +30,9 @@ namespace TekManager.Code.EbayScraper
                 url += $"&_udlo={lowPrice}&_udhi={highPrice}";
             }
 
-            var webpage = _browser.NavigateToPage(new Uri(url));
+            //var webpage = _browser.NavigateToPage(new Uri(url));
+            var webpage = _htmlWeb.Load(new Uri(url));
+
             return webpage.Html;
         }
     }

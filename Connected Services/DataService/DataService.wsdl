@@ -230,8 +230,25 @@
           <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateOfBirth" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AlertsActive" type="s:boolean" />
         </s:sequence>
       </s:complexType>
+      <s:element name="GetMember">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberResult" type="tns:ArrayOfMemberSqlModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="SaveSellProductRequest">
         <s:complexType>
           <s:sequence>
@@ -362,6 +379,21 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="UpdateMemberStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="memberId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMemberStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateMemberStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="UpdateMember">
         <s:complexType>
           <s:sequence>
@@ -483,6 +515,99 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="SavePayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="savePaymentDto" type="tns:SavePaymentDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SavePaymentDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentSqlModel" type="tns:PaymentSqlModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentBasketSqlModels" type="tns:ArrayOfPaymentBasketSqlModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentSqlModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MemberId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentMethod" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalCost" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPaymentBasketSqlModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaymentBasketSqlModel" nillable="true" type="tns:PaymentBasketSqlModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentBasketSqlModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductPrice" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductQuantity" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SavePaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SavePaymentResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentsByMemberIdSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchTerm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentsByMemberIdSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentsByMemberIdSearchResult" type="tns:ArrayOfPaymentSqlModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPaymentSqlModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaymentSqlModel" nillable="true" type="tns:PaymentSqlModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPaymentBasketByPaymentId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="paymentId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentBasketByPaymentIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentBasketByPaymentIdResult" type="tns:ArrayOfPaymentBasketSqlModelWithProductName" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPaymentBasketSqlModelWithProductName">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaymentBasketSqlModelWithProductName" nillable="true" type="tns:PaymentBasketSqlModelWithProductName" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentBasketSqlModelWithProductName">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductPrice" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductQuantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="LoginSoapIn">
@@ -563,6 +688,12 @@
   <wsdl:message name="GetMembersByEmailOrIdSoapOut">
     <wsdl:part name="parameters" element="tns:GetMembersByEmailOrIdResponse" />
   </wsdl:message>
+  <wsdl:message name="GetMemberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMember" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberResponse" />
+  </wsdl:message>
   <wsdl:message name="SaveSellProductRequestSoapIn">
     <wsdl:part name="parameters" element="tns:SaveSellProductRequest" />
   </wsdl:message>
@@ -598,6 +729,12 @@
   </wsdl:message>
   <wsdl:message name="SendSellRequestUpdateEmailSoapOut">
     <wsdl:part name="parameters" element="tns:SendSellRequestUpdateEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMemberStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMemberStatusResponse" />
   </wsdl:message>
   <wsdl:message name="UpdateMemberSoapIn">
     <wsdl:part name="parameters" element="tns:UpdateMember" />
@@ -640,6 +777,24 @@
   </wsdl:message>
   <wsdl:message name="GetBlogPostsByTitleOrContentSoapOut">
     <wsdl:part name="parameters" element="tns:GetBlogPostsByTitleOrContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SavePaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:SavePayment" />
+  </wsdl:message>
+  <wsdl:message name="SavePaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:SavePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentsByMemberIdSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaymentsByMemberIdSearch" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentsByMemberIdSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentsByMemberIdSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentBasketByPaymentIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaymentBasketByPaymentId" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentBasketByPaymentIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentBasketByPaymentIdResponse" />
   </wsdl:message>
   <wsdl:portType name="DataServiceSoap">
     <wsdl:operation name="Login">
@@ -694,6 +849,10 @@
       <wsdl:input message="tns:GetMembersByEmailOrIdSoapIn" />
       <wsdl:output message="tns:GetMembersByEmailOrIdSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetMember">
+      <wsdl:input message="tns:GetMemberSoapIn" />
+      <wsdl:output message="tns:GetMemberSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="SaveSellProductRequest">
       <wsdl:input message="tns:SaveSellProductRequestSoapIn" />
       <wsdl:output message="tns:SaveSellProductRequestSoapOut" />
@@ -717,6 +876,10 @@
     <wsdl:operation name="SendSellRequestUpdateEmail">
       <wsdl:input message="tns:SendSellRequestUpdateEmailSoapIn" />
       <wsdl:output message="tns:SendSellRequestUpdateEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberStatus">
+      <wsdl:input message="tns:UpdateMemberStatusSoapIn" />
+      <wsdl:output message="tns:UpdateMemberStatusSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="UpdateMember">
       <wsdl:input message="tns:UpdateMemberSoapIn" />
@@ -745,6 +908,18 @@
     <wsdl:operation name="GetBlogPostsByTitleOrContent">
       <wsdl:input message="tns:GetBlogPostsByTitleOrContentSoapIn" />
       <wsdl:output message="tns:GetBlogPostsByTitleOrContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePayment">
+      <wsdl:input message="tns:SavePaymentSoapIn" />
+      <wsdl:output message="tns:SavePaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentsByMemberIdSearch">
+      <wsdl:input message="tns:GetPaymentsByMemberIdSearchSoapIn" />
+      <wsdl:output message="tns:GetPaymentsByMemberIdSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBasketByPaymentId">
+      <wsdl:input message="tns:GetPaymentBasketByPaymentIdSoapIn" />
+      <wsdl:output message="tns:GetPaymentBasketByPaymentIdSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="DataServiceSoap" type="tns:DataServiceSoap">
@@ -866,6 +1041,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetMember">
+      <soap:operation soapAction="http://tempuri.org/GetMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SaveSellProductRequest">
       <soap:operation soapAction="http://tempuri.org/SaveSellProductRequest" style="document" />
       <wsdl:input>
@@ -913,6 +1097,15 @@
     </wsdl:operation>
     <wsdl:operation name="SendSellRequestUpdateEmail">
       <soap:operation soapAction="http://tempuri.org/SendSellRequestUpdateEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateMemberStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -976,6 +1169,33 @@
     </wsdl:operation>
     <wsdl:operation name="GetBlogPostsByTitleOrContent">
       <soap:operation soapAction="http://tempuri.org/GetBlogPostsByTitleOrContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePayment">
+      <soap:operation soapAction="http://tempuri.org/SavePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentsByMemberIdSearch">
+      <soap:operation soapAction="http://tempuri.org/GetPaymentsByMemberIdSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBasketByPaymentId">
+      <soap:operation soapAction="http://tempuri.org/GetPaymentBasketByPaymentId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1103,6 +1323,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetMember">
+      <soap12:operation soapAction="http://tempuri.org/GetMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SaveSellProductRequest">
       <soap12:operation soapAction="http://tempuri.org/SaveSellProductRequest" style="document" />
       <wsdl:input>
@@ -1150,6 +1379,15 @@
     </wsdl:operation>
     <wsdl:operation name="SendSellRequestUpdateEmail">
       <soap12:operation soapAction="http://tempuri.org/SendSellRequestUpdateEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMemberStatus" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1213,6 +1451,33 @@
     </wsdl:operation>
     <wsdl:operation name="GetBlogPostsByTitleOrContent">
       <soap12:operation soapAction="http://tempuri.org/GetBlogPostsByTitleOrContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePayment">
+      <soap12:operation soapAction="http://tempuri.org/SavePayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentsByMemberIdSearch">
+      <soap12:operation soapAction="http://tempuri.org/GetPaymentsByMemberIdSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBasketByPaymentId">
+      <soap12:operation soapAction="http://tempuri.org/GetPaymentBasketByPaymentId" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

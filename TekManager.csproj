@@ -138,6 +138,12 @@
     <Compile Include="Forms\EditProduct.Designer.cs">
       <DependentUpon>EditProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ViewPaymentBasket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewPaymentBasket.Designer.cs">
+      <DependentUpon>ViewPaymentBasket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ViewSellRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     <EmbeddedResource Include="Forms\EditProduct.resx">
       <DependentUpon>EditProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewPaymentBasket.resx">
+      <DependentUpon>ViewPaymentBasket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewSellRequest.resx">
       <DependentUpon>ViewSellRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,7 +255,16 @@
     <None Include="Connected Services\DataService\TekManager.DataService.GetLogsByMessageResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.GetMemberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\DataService\TekManager.DataService.GetMembersByEmailOrIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.GetPaymentBasketByPaymentIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.GetPaymentsByMemberIdSearchResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.GetProductsByPageResponse.datasource">
@@ -276,6 +294,12 @@
     <None Include="Connected Services\DataService\TekManager.DataService.MemberSqlModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.PaymentBasketSqlModelWithProductName.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.PaymentSqlModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\DataService\TekManager.DataService.ProductSqlModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -286,6 +310,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.SaveBlogPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.SavePaymentResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.SaveProductResponse.datasource">
@@ -301,6 +328,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.UpdateMemberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataService\TekManager.DataService.UpdateMemberStatusResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DataService\TekManager.DataService.UpdateSellRequestStatusAndReasonResponse.datasource">

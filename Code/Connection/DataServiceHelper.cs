@@ -298,5 +298,31 @@ namespace TekManager.Code.Connection
                 return Result.Failure<int>(e.ToString());
             }
         }
+
+        public Result<List<PaymentSqlModel>> GetPaymentsByMemberIdSearch(string searchTerm, int count)
+        {
+            try
+            {
+                return Result.Success(_client.GetPaymentsByMemberIdSearch(searchTerm, count).ToList());
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<List<PaymentSqlModel>>(e.ToString());
+            }
+        }
+
+        public Result<List<PaymentBasketSqlModelWithProductName>> GetPaymentBasketByPaymentId(int paymentId)
+        {
+            try
+            {
+                return Result.Success(_client.GetPaymentBasketByPaymentId(paymentId).ToList());
+            }
+            catch (Exception e)
+            {
+                Logger.Log(EventLevel.Error, e.ToString());
+                return Result.Failure<List<PaymentBasketSqlModelWithProductName>>(e.ToString());
+            }
+        }
     }
 }

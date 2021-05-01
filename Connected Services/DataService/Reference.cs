@@ -409,6 +409,13 @@ namespace TekManager.DataService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StatusField;
         
+        private System.Nullable<System.DateTime> DateOfBirthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GenderField;
+        
+        private bool AlertsActiveField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -480,6 +487,45 @@ namespace TekManager.DataService {
                 if ((object.ReferenceEquals(this.StatusField, value) != true)) {
                     this.StatusField = value;
                     this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
+        public System.Nullable<System.DateTime> DateOfBirth {
+            get {
+                return this.DateOfBirthField;
+            }
+            set {
+                if ((this.DateOfBirthField.Equals(value) != true)) {
+                    this.DateOfBirthField = value;
+                    this.RaisePropertyChanged("DateOfBirth");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string Gender {
+            get {
+                return this.GenderField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GenderField, value) != true)) {
+                    this.GenderField = value;
+                    this.RaisePropertyChanged("Gender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        public bool AlertsActive {
+            get {
+                return this.AlertsActiveField;
+            }
+            set {
+                if ((this.AlertsActiveField.Equals(value) != true)) {
+                    this.AlertsActiveField = value;
+                    this.RaisePropertyChanged("AlertsActive");
                 }
             }
         }
@@ -1142,6 +1188,415 @@ namespace TekManager.DataService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SavePaymentDto", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class SavePaymentDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TekManager.DataService.PaymentSqlModel PaymentSqlModelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TekManager.DataService.PaymentBasketSqlModel[] PaymentBasketSqlModelsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public TekManager.DataService.PaymentSqlModel PaymentSqlModel {
+            get {
+                return this.PaymentSqlModelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaymentSqlModelField, value) != true)) {
+                    this.PaymentSqlModelField = value;
+                    this.RaisePropertyChanged("PaymentSqlModel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public TekManager.DataService.PaymentBasketSqlModel[] PaymentBasketSqlModels {
+            get {
+                return this.PaymentBasketSqlModelsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaymentBasketSqlModelsField, value) != true)) {
+                    this.PaymentBasketSqlModelsField = value;
+                    this.RaisePropertyChanged("PaymentBasketSqlModels");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PaymentSqlModel", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class PaymentSqlModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        private int MemberIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PaymentMethodField;
+        
+        private System.DateTime PaymentTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BillingAddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TotalCostField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int MemberId {
+            get {
+                return this.MemberIdField;
+            }
+            set {
+                if ((this.MemberIdField.Equals(value) != true)) {
+                    this.MemberIdField = value;
+                    this.RaisePropertyChanged("MemberId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string PaymentMethod {
+            get {
+                return this.PaymentMethodField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaymentMethodField, value) != true)) {
+                    this.PaymentMethodField = value;
+                    this.RaisePropertyChanged("PaymentMethod");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public System.DateTime PaymentTime {
+            get {
+                return this.PaymentTimeField;
+            }
+            set {
+                if ((this.PaymentTimeField.Equals(value) != true)) {
+                    this.PaymentTimeField = value;
+                    this.RaisePropertyChanged("PaymentTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string BillingAddress {
+            get {
+                return this.BillingAddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BillingAddressField, value) != true)) {
+                    this.BillingAddressField = value;
+                    this.RaisePropertyChanged("BillingAddress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string TotalCost {
+            get {
+                return this.TotalCostField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TotalCostField, value) != true)) {
+                    this.TotalCostField = value;
+                    this.RaisePropertyChanged("TotalCost");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PaymentBasketSqlModel", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class PaymentBasketSqlModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        private int PaymentIdField;
+        
+        private int ProductIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductPriceField;
+        
+        private int ProductQuantityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int PaymentId {
+            get {
+                return this.PaymentIdField;
+            }
+            set {
+                if ((this.PaymentIdField.Equals(value) != true)) {
+                    this.PaymentIdField = value;
+                    this.RaisePropertyChanged("PaymentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int ProductId {
+            get {
+                return this.ProductIdField;
+            }
+            set {
+                if ((this.ProductIdField.Equals(value) != true)) {
+                    this.ProductIdField = value;
+                    this.RaisePropertyChanged("ProductId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string ProductPrice {
+            get {
+                return this.ProductPriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductPriceField, value) != true)) {
+                    this.ProductPriceField = value;
+                    this.RaisePropertyChanged("ProductPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int ProductQuantity {
+            get {
+                return this.ProductQuantityField;
+            }
+            set {
+                if ((this.ProductQuantityField.Equals(value) != true)) {
+                    this.ProductQuantityField = value;
+                    this.RaisePropertyChanged("ProductQuantity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PaymentBasketSqlModelWithProductName", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class PaymentBasketSqlModelWithProductName : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        private int PaymentIdField;
+        
+        private int ProductIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductPriceField;
+        
+        private int ProductQuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int PaymentId {
+            get {
+                return this.PaymentIdField;
+            }
+            set {
+                if ((this.PaymentIdField.Equals(value) != true)) {
+                    this.PaymentIdField = value;
+                    this.RaisePropertyChanged("PaymentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int ProductId {
+            get {
+                return this.ProductIdField;
+            }
+            set {
+                if ((this.ProductIdField.Equals(value) != true)) {
+                    this.ProductIdField = value;
+                    this.RaisePropertyChanged("ProductId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string ProductPrice {
+            get {
+                return this.ProductPriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductPriceField, value) != true)) {
+                    this.ProductPriceField = value;
+                    this.RaisePropertyChanged("ProductPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int ProductQuantity {
+            get {
+                return this.ProductQuantityField;
+            }
+            set {
+                if ((this.ProductQuantityField.Equals(value) != true)) {
+                    this.ProductQuantityField = value;
+                    this.RaisePropertyChanged("ProductQuantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DataService.DataServiceSoap")]
     public interface DataServiceSoap {
@@ -1236,6 +1691,13 @@ namespace TekManager.DataService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMembersByEmailOrId", ReplyAction="*")]
         System.Threading.Tasks.Task<TekManager.DataService.GetMembersByEmailOrIdResponse> GetMembersByEmailOrIdAsync(TekManager.DataService.GetMembersByEmailOrIdRequest request);
         
+        // CODEGEN: Generating message contract since element name GetMemberResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMember", ReplyAction="*")]
+        TekManager.DataService.GetMemberResponse GetMember(TekManager.DataService.GetMemberRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMember", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetMemberResponse> GetMemberAsync(TekManager.DataService.GetMemberRequest request);
+        
         // CODEGEN: Generating message contract since element name sellProductRequest from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SaveSellProductRequest", ReplyAction="*")]
         TekManager.DataService.SaveSellProductRequestResponse SaveSellProductRequest(TekManager.DataService.SaveSellProductRequestRequest request);
@@ -1276,6 +1738,13 @@ namespace TekManager.DataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SendSellRequestUpdateEmail", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> SendSellRequestUpdateEmailAsync(int sellRequestId);
+        
+        // CODEGEN: Generating message contract since element name status from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateMemberStatus", ReplyAction="*")]
+        TekManager.DataService.UpdateMemberStatusResponse UpdateMemberStatus(TekManager.DataService.UpdateMemberStatusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateMemberStatus", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.UpdateMemberStatusResponse> UpdateMemberStatusAsync(TekManager.DataService.UpdateMemberStatusRequest request);
         
         // CODEGEN: Generating message contract since element name memberModel from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateMember", ReplyAction="*")]
@@ -1324,6 +1793,27 @@ namespace TekManager.DataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBlogPostsByTitleOrContent", ReplyAction="*")]
         System.Threading.Tasks.Task<TekManager.DataService.GetBlogPostsByTitleOrContentResponse> GetBlogPostsByTitleOrContentAsync(TekManager.DataService.GetBlogPostsByTitleOrContentRequest request);
+        
+        // CODEGEN: Generating message contract since element name savePaymentDto from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SavePayment", ReplyAction="*")]
+        TekManager.DataService.SavePaymentResponse SavePayment(TekManager.DataService.SavePaymentRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SavePayment", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.SavePaymentResponse> SavePaymentAsync(TekManager.DataService.SavePaymentRequest request);
+        
+        // CODEGEN: Generating message contract since element name searchTerm from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPaymentsByMemberIdSearch", ReplyAction="*")]
+        TekManager.DataService.GetPaymentsByMemberIdSearchResponse GetPaymentsByMemberIdSearch(TekManager.DataService.GetPaymentsByMemberIdSearchRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPaymentsByMemberIdSearch", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetPaymentsByMemberIdSearchResponse> GetPaymentsByMemberIdSearchAsync(TekManager.DataService.GetPaymentsByMemberIdSearchRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetPaymentBasketByPaymentIdResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPaymentBasketByPaymentId", ReplyAction="*")]
+        TekManager.DataService.GetPaymentBasketByPaymentIdResponse GetPaymentBasketByPaymentId(TekManager.DataService.GetPaymentBasketByPaymentIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPaymentBasketByPaymentId", ReplyAction="*")]
+        System.Threading.Tasks.Task<TekManager.DataService.GetPaymentBasketByPaymentIdResponse> GetPaymentBasketByPaymentIdAsync(TekManager.DataService.GetPaymentBasketByPaymentIdRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2141,6 +2631,74 @@ namespace TekManager.DataService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMemberRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMember", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetMemberRequestBody Body;
+        
+        public GetMemberRequest() {
+        }
+        
+        public GetMemberRequest(TekManager.DataService.GetMemberRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMemberRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public GetMemberRequestBody() {
+        }
+        
+        public GetMemberRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMemberResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMemberResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetMemberResponseBody Body;
+        
+        public GetMemberResponse() {
+        }
+        
+        public GetMemberResponse(TekManager.DataService.GetMemberResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMemberResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.MemberSqlModel[] GetMemberResult;
+        
+        public GetMemberResponseBody() {
+        }
+        
+        public GetMemberResponseBody(TekManager.DataService.MemberSqlModel[] GetMemberResult) {
+            this.GetMemberResult = GetMemberResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class SaveSellProductRequestRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="SaveSellProductRequest", Namespace="http://tempuri.org/", Order=0)]
@@ -2460,6 +3018,78 @@ namespace TekManager.DataService {
         
         public GetSellRequestImagesBySellRequestIdResponseBody(TekManager.DataService.SellRequestImageModel[] GetSellRequestImagesBySellRequestIdResult) {
             this.GetSellRequestImagesBySellRequestIdResult = GetSellRequestImagesBySellRequestIdResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateMemberStatusRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateMemberStatus", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.UpdateMemberStatusRequestBody Body;
+        
+        public UpdateMemberStatusRequest() {
+        }
+        
+        public UpdateMemberStatusRequest(TekManager.DataService.UpdateMemberStatusRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateMemberStatusRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int memberId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string status;
+        
+        public UpdateMemberStatusRequestBody() {
+        }
+        
+        public UpdateMemberStatusRequestBody(int memberId, string status) {
+            this.memberId = memberId;
+            this.status = status;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateMemberStatusResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateMemberStatusResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.UpdateMemberStatusResponseBody Body;
+        
+        public UpdateMemberStatusResponse() {
+        }
+        
+        public UpdateMemberStatusResponse(TekManager.DataService.UpdateMemberStatusResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateMemberStatusResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int UpdateMemberStatusResult;
+        
+        public UpdateMemberStatusResponseBody() {
+        }
+        
+        public UpdateMemberStatusResponseBody(int UpdateMemberStatusResult) {
+            this.UpdateMemberStatusResult = UpdateMemberStatusResult;
         }
     }
     
@@ -2872,6 +3502,214 @@ namespace TekManager.DataService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SavePaymentRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SavePayment", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.SavePaymentRequestBody Body;
+        
+        public SavePaymentRequest() {
+        }
+        
+        public SavePaymentRequest(TekManager.DataService.SavePaymentRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SavePaymentRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.SavePaymentDto savePaymentDto;
+        
+        public SavePaymentRequestBody() {
+        }
+        
+        public SavePaymentRequestBody(TekManager.DataService.SavePaymentDto savePaymentDto) {
+            this.savePaymentDto = savePaymentDto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SavePaymentResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SavePaymentResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.SavePaymentResponseBody Body;
+        
+        public SavePaymentResponse() {
+        }
+        
+        public SavePaymentResponse(TekManager.DataService.SavePaymentResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SavePaymentResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.ArrayOfString SavePaymentResult;
+        
+        public SavePaymentResponseBody() {
+        }
+        
+        public SavePaymentResponseBody(TekManager.DataService.ArrayOfString SavePaymentResult) {
+            this.SavePaymentResult = SavePaymentResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPaymentsByMemberIdSearchRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPaymentsByMemberIdSearch", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetPaymentsByMemberIdSearchRequestBody Body;
+        
+        public GetPaymentsByMemberIdSearchRequest() {
+        }
+        
+        public GetPaymentsByMemberIdSearchRequest(TekManager.DataService.GetPaymentsByMemberIdSearchRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetPaymentsByMemberIdSearchRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string searchTerm;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int count;
+        
+        public GetPaymentsByMemberIdSearchRequestBody() {
+        }
+        
+        public GetPaymentsByMemberIdSearchRequestBody(string searchTerm, int count) {
+            this.searchTerm = searchTerm;
+            this.count = count;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPaymentsByMemberIdSearchResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPaymentsByMemberIdSearchResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetPaymentsByMemberIdSearchResponseBody Body;
+        
+        public GetPaymentsByMemberIdSearchResponse() {
+        }
+        
+        public GetPaymentsByMemberIdSearchResponse(TekManager.DataService.GetPaymentsByMemberIdSearchResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetPaymentsByMemberIdSearchResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.PaymentSqlModel[] GetPaymentsByMemberIdSearchResult;
+        
+        public GetPaymentsByMemberIdSearchResponseBody() {
+        }
+        
+        public GetPaymentsByMemberIdSearchResponseBody(TekManager.DataService.PaymentSqlModel[] GetPaymentsByMemberIdSearchResult) {
+            this.GetPaymentsByMemberIdSearchResult = GetPaymentsByMemberIdSearchResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPaymentBasketByPaymentIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPaymentBasketByPaymentId", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetPaymentBasketByPaymentIdRequestBody Body;
+        
+        public GetPaymentBasketByPaymentIdRequest() {
+        }
+        
+        public GetPaymentBasketByPaymentIdRequest(TekManager.DataService.GetPaymentBasketByPaymentIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetPaymentBasketByPaymentIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int paymentId;
+        
+        public GetPaymentBasketByPaymentIdRequestBody() {
+        }
+        
+        public GetPaymentBasketByPaymentIdRequestBody(int paymentId) {
+            this.paymentId = paymentId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPaymentBasketByPaymentIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPaymentBasketByPaymentIdResponse", Namespace="http://tempuri.org/", Order=0)]
+        public TekManager.DataService.GetPaymentBasketByPaymentIdResponseBody Body;
+        
+        public GetPaymentBasketByPaymentIdResponse() {
+        }
+        
+        public GetPaymentBasketByPaymentIdResponse(TekManager.DataService.GetPaymentBasketByPaymentIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetPaymentBasketByPaymentIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public TekManager.DataService.PaymentBasketSqlModelWithProductName[] GetPaymentBasketByPaymentIdResult;
+        
+        public GetPaymentBasketByPaymentIdResponseBody() {
+        }
+        
+        public GetPaymentBasketByPaymentIdResponseBody(TekManager.DataService.PaymentBasketSqlModelWithProductName[] GetPaymentBasketByPaymentIdResult) {
+            this.GetPaymentBasketByPaymentIdResult = GetPaymentBasketByPaymentIdResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface DataServiceSoapChannel : TekManager.DataService.DataServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -3212,6 +4050,31 @@ namespace TekManager.DataService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetMemberResponse TekManager.DataService.DataServiceSoap.GetMember(TekManager.DataService.GetMemberRequest request) {
+            return base.Channel.GetMember(request);
+        }
+        
+        public TekManager.DataService.MemberSqlModel[] GetMember(int id) {
+            TekManager.DataService.GetMemberRequest inValue = new TekManager.DataService.GetMemberRequest();
+            inValue.Body = new TekManager.DataService.GetMemberRequestBody();
+            inValue.Body.id = id;
+            TekManager.DataService.GetMemberResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetMember(inValue);
+            return retVal.Body.GetMemberResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetMemberResponse> TekManager.DataService.DataServiceSoap.GetMemberAsync(TekManager.DataService.GetMemberRequest request) {
+            return base.Channel.GetMemberAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetMemberResponse> GetMemberAsync(int id) {
+            TekManager.DataService.GetMemberRequest inValue = new TekManager.DataService.GetMemberRequest();
+            inValue.Body = new TekManager.DataService.GetMemberRequestBody();
+            inValue.Body.id = id;
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetMemberAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TekManager.DataService.SaveSellProductRequestResponse TekManager.DataService.DataServiceSoap.SaveSellProductRequest(TekManager.DataService.SaveSellProductRequestRequest request) {
             return base.Channel.SaveSellProductRequest(request);
         }
@@ -3339,6 +4202,33 @@ namespace TekManager.DataService {
         
         public System.Threading.Tasks.Task<bool> SendSellRequestUpdateEmailAsync(int sellRequestId) {
             return base.Channel.SendSellRequestUpdateEmailAsync(sellRequestId);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.UpdateMemberStatusResponse TekManager.DataService.DataServiceSoap.UpdateMemberStatus(TekManager.DataService.UpdateMemberStatusRequest request) {
+            return base.Channel.UpdateMemberStatus(request);
+        }
+        
+        public int UpdateMemberStatus(int memberId, string status) {
+            TekManager.DataService.UpdateMemberStatusRequest inValue = new TekManager.DataService.UpdateMemberStatusRequest();
+            inValue.Body = new TekManager.DataService.UpdateMemberStatusRequestBody();
+            inValue.Body.memberId = memberId;
+            inValue.Body.status = status;
+            TekManager.DataService.UpdateMemberStatusResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).UpdateMemberStatus(inValue);
+            return retVal.Body.UpdateMemberStatusResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.UpdateMemberStatusResponse> TekManager.DataService.DataServiceSoap.UpdateMemberStatusAsync(TekManager.DataService.UpdateMemberStatusRequest request) {
+            return base.Channel.UpdateMemberStatusAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.UpdateMemberStatusResponse> UpdateMemberStatusAsync(int memberId, string status) {
+            TekManager.DataService.UpdateMemberStatusRequest inValue = new TekManager.DataService.UpdateMemberStatusRequest();
+            inValue.Body = new TekManager.DataService.UpdateMemberStatusRequestBody();
+            inValue.Body.memberId = memberId;
+            inValue.Body.status = status;
+            return ((TekManager.DataService.DataServiceSoap)(this)).UpdateMemberStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3499,6 +4389,83 @@ namespace TekManager.DataService {
             inValue.Body.searchTerm = searchTerm;
             inValue.Body.count = count;
             return ((TekManager.DataService.DataServiceSoap)(this)).GetBlogPostsByTitleOrContentAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.SavePaymentResponse TekManager.DataService.DataServiceSoap.SavePayment(TekManager.DataService.SavePaymentRequest request) {
+            return base.Channel.SavePayment(request);
+        }
+        
+        public TekManager.DataService.ArrayOfString SavePayment(TekManager.DataService.SavePaymentDto savePaymentDto) {
+            TekManager.DataService.SavePaymentRequest inValue = new TekManager.DataService.SavePaymentRequest();
+            inValue.Body = new TekManager.DataService.SavePaymentRequestBody();
+            inValue.Body.savePaymentDto = savePaymentDto;
+            TekManager.DataService.SavePaymentResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).SavePayment(inValue);
+            return retVal.Body.SavePaymentResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.SavePaymentResponse> TekManager.DataService.DataServiceSoap.SavePaymentAsync(TekManager.DataService.SavePaymentRequest request) {
+            return base.Channel.SavePaymentAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.SavePaymentResponse> SavePaymentAsync(TekManager.DataService.SavePaymentDto savePaymentDto) {
+            TekManager.DataService.SavePaymentRequest inValue = new TekManager.DataService.SavePaymentRequest();
+            inValue.Body = new TekManager.DataService.SavePaymentRequestBody();
+            inValue.Body.savePaymentDto = savePaymentDto;
+            return ((TekManager.DataService.DataServiceSoap)(this)).SavePaymentAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetPaymentsByMemberIdSearchResponse TekManager.DataService.DataServiceSoap.GetPaymentsByMemberIdSearch(TekManager.DataService.GetPaymentsByMemberIdSearchRequest request) {
+            return base.Channel.GetPaymentsByMemberIdSearch(request);
+        }
+        
+        public TekManager.DataService.PaymentSqlModel[] GetPaymentsByMemberIdSearch(string searchTerm, int count) {
+            TekManager.DataService.GetPaymentsByMemberIdSearchRequest inValue = new TekManager.DataService.GetPaymentsByMemberIdSearchRequest();
+            inValue.Body = new TekManager.DataService.GetPaymentsByMemberIdSearchRequestBody();
+            inValue.Body.searchTerm = searchTerm;
+            inValue.Body.count = count;
+            TekManager.DataService.GetPaymentsByMemberIdSearchResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetPaymentsByMemberIdSearch(inValue);
+            return retVal.Body.GetPaymentsByMemberIdSearchResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetPaymentsByMemberIdSearchResponse> TekManager.DataService.DataServiceSoap.GetPaymentsByMemberIdSearchAsync(TekManager.DataService.GetPaymentsByMemberIdSearchRequest request) {
+            return base.Channel.GetPaymentsByMemberIdSearchAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetPaymentsByMemberIdSearchResponse> GetPaymentsByMemberIdSearchAsync(string searchTerm, int count) {
+            TekManager.DataService.GetPaymentsByMemberIdSearchRequest inValue = new TekManager.DataService.GetPaymentsByMemberIdSearchRequest();
+            inValue.Body = new TekManager.DataService.GetPaymentsByMemberIdSearchRequestBody();
+            inValue.Body.searchTerm = searchTerm;
+            inValue.Body.count = count;
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetPaymentsByMemberIdSearchAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TekManager.DataService.GetPaymentBasketByPaymentIdResponse TekManager.DataService.DataServiceSoap.GetPaymentBasketByPaymentId(TekManager.DataService.GetPaymentBasketByPaymentIdRequest request) {
+            return base.Channel.GetPaymentBasketByPaymentId(request);
+        }
+        
+        public TekManager.DataService.PaymentBasketSqlModelWithProductName[] GetPaymentBasketByPaymentId(int paymentId) {
+            TekManager.DataService.GetPaymentBasketByPaymentIdRequest inValue = new TekManager.DataService.GetPaymentBasketByPaymentIdRequest();
+            inValue.Body = new TekManager.DataService.GetPaymentBasketByPaymentIdRequestBody();
+            inValue.Body.paymentId = paymentId;
+            TekManager.DataService.GetPaymentBasketByPaymentIdResponse retVal = ((TekManager.DataService.DataServiceSoap)(this)).GetPaymentBasketByPaymentId(inValue);
+            return retVal.Body.GetPaymentBasketByPaymentIdResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TekManager.DataService.GetPaymentBasketByPaymentIdResponse> TekManager.DataService.DataServiceSoap.GetPaymentBasketByPaymentIdAsync(TekManager.DataService.GetPaymentBasketByPaymentIdRequest request) {
+            return base.Channel.GetPaymentBasketByPaymentIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TekManager.DataService.GetPaymentBasketByPaymentIdResponse> GetPaymentBasketByPaymentIdAsync(int paymentId) {
+            TekManager.DataService.GetPaymentBasketByPaymentIdRequest inValue = new TekManager.DataService.GetPaymentBasketByPaymentIdRequest();
+            inValue.Body = new TekManager.DataService.GetPaymentBasketByPaymentIdRequestBody();
+            inValue.Body.paymentId = paymentId;
+            return ((TekManager.DataService.DataServiceSoap)(this)).GetPaymentBasketByPaymentIdAsync(inValue);
         }
     }
 }
