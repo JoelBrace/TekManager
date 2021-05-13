@@ -93,6 +93,7 @@ namespace TekManager.Code.EbayScraper
                 }
 
                 priceList = priceList.Select(price => price.Replace("?", "")).ToList();
+                priceList = priceList.Select(price => price.Replace("£", "")).ToList();
 
                 items.Add(new EbayItem(name, priceList.Select(Convert.ToDecimal).ToList(), imageUrl, url));
             }
