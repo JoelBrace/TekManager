@@ -30,8 +30,8 @@ namespace TekManager.Code.EbayScraper
                 url += $"&_udlo={lowPrice}&_udhi={highPrice}";
             }
 
-            //var webpage = _browser.NavigateToPage(new Uri(url));
-            var webpage = _htmlWeb.Load(new Uri(url));
+            var webpage = _browser.NavigateToPage(new Uri(url));
+            //var webpage = _htmlWeb.Load(new Uri(url));
 
             return webpage.Html;
         }
